@@ -37,7 +37,6 @@ const App: React.FC = () => {
     <Router history={history}>
       <ResetCSS />
       <GlobalStyle />
-      <Menu>
         <Suspense fallback={<PageLoader />}>
           <Switch>
             <Route path="/" exact>
@@ -56,7 +55,6 @@ const App: React.FC = () => {
             <Route component={NotFound} />
           </Switch>
         </Suspense>
-      </Menu>
       <EasterEgg iterations={2} />
       <ToastListener />
       <GlobalCheckBullHiccupClaimStatus />
