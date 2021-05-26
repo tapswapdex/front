@@ -30,7 +30,7 @@ const faqData = {
     },
     {
       title: `Audit`,
-      content: `Bush V1 contract were fully audited by Techrate, <a href="https://tapswap.finance/files/audit_techrate.pdf" target="_blank" style="color: orange;font-weight: bold">check the Techrate audit</a>`,
+      content: `Bush V1 contract were fully audited by Techrate, <a href="https://tapswap.money/files/audit_techrate.pdf" target="_blank" style="color: orange;font-weight: bold">check the Techrate audit</a>`,
     },
     {
       title: `V1 vs V0 ?`,

@@ -128,11 +128,11 @@ const data = {
   rows: [
     // {
     //   title: `What means APE LP ribbon on farms ?`,
-    //   content: `These farms use liquidities from the ApeSwap DEX. To provide LP to these farms, you need to use ApeSwap DEX interface by following <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C" target="_blank" style="color: orange;font-weight: bold">this link</a>. Read more about the TapSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+    //   content: `These farms use liquidities from the ApeSwap DEX. To provide LP to these farms, you need to use ApeSwap DEX interface by following <a href="https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C" target="_blank" style="color: orange;font-weight: bold">this link</a>. Read more about the TapSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
     // },
     {
       title: 'What means PCS LP ribbon on farms ?',
-      content: `These farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. TapSwap keep these farms available to be fair with users who paid deposit fees to enter into. To provide LP to these farms, you need to use PanCakeSwap DEX interface by following <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C" target="_blank" style="color: orange;font-weight: bold">this link</a>. All futures farms created on TapSwap will use APE LP. Read more about the TapSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
+      content: `These farms use liquidities from the <strong>P</strong>an<strong>C</strong>ake<strong>S</strong>wap DEX. TapSwap keep these farms available to be fair with users who paid deposit fees to enter into. To provide LP to these farms, you need to use PanCakeSwap DEX interface by following <a href="https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C" target="_blank" style="color: orange;font-weight: bold">this link</a>. All futures farms created on TapSwap will use APE LP. Read more about the TapSwap & ApeSwap partnership in this <a href="https://tapswapmoneydex.medium.com/partnership-with-apeswap-finance-c1dd2dd44eee" target="_blank" style="color: orange;font-weight: bold">blog post</a>.`,
     },
     {
       title: 'What means OLD ribbon on farms ?',
@@ -167,7 +167,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const cakePrice = usePriceCakeBusd()
   const bnbPrice = usePriceBnbBusd()
   const [query, setQuery] = useState('')
-  const [viewMode, setViewMode] = useState(ViewMode.CARD) // ViewMode.CARD / TABLE
+  const [viewMode, setViewMode] = useState(ViewMode.TABLE) // ViewMode.CARD / TABLE
   const ethPriceUsd = usePriceEthBusd()
   const { account } = useWeb3React()
   const [sortOption, setSortOption] = useState('hot')
@@ -421,7 +421,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         </Heading>
         {/* <Text>
           <AddressLink
-            href="https://doc.tapswap.finance/tokennomics/burn-mechanism-and-fee-farming"
+            href="https://doc.tapswap.money/tokennomics/burn-mechanism-and-fee-farming"
             color="text"
             external
           >

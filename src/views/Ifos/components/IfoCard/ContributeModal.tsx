@@ -80,7 +80,7 @@ const ContributeModal: React.FC<Props> = ({ currency, contract, currencyAddress,
           onConfirm={handleConfirm}
         />
         <LinkExternal
-          href="https://https://swape.tapswap.finance/#/add/ETH/0x56eab07247e3e6404ac90140F20bba61375d5C3C"
+          href="https://https://swape.tapswap.money/#/add/ETH/0x56eab07247e3e6404ac90140F20bba61375d5C3C"
           style={{ margin: '16px auto 0' }}
         >
           {`Get ${currency}`}
