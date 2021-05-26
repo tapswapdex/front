@@ -1,26 +1,34 @@
+import React from 'react';
 import { MenuEntry } from '@pancakeswap-libs/uikit'
+import BushIcon from '../../assets/svg/icons/Bush'
 
-const config: MenuEntry[] = [
+interface AppMenuEntry extends MenuEntry {
+  iconComponent?: any
+}
+
+const config: AppMenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
     href: '/',
+    iconComponent: BushIcon
   },
   {
     label: 'Trade',
     icon: 'TradeIcon',
-    items: [
-      {
-        label: 'Exchange',
-        href:
-          'https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-      },
-      {
-        label: 'Liquidity',
-        href:
-          'https://swape.tapswap.finance/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-      },
-    ],
+    href:"https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C",
+    // items: [
+    //   {
+    //     label: 'Exchange',
+    //     href:
+    //       'https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    //   },
+    //   {
+    //     label: 'Liquidity',
+    //     href:
+    //       'https://swape.tapswap.finance/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    //   },
+    // ],
   },
   {
     label: 'Farms',
@@ -61,51 +69,52 @@ const config: MenuEntry[] = [
   {
     label: 'Info',
     icon: 'InfoIcon',
-    items: [
-      {
-        label: 'Token',
-        href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
-        target: '_blank',
-      },
-      // {
-      //   label: 'Contracts',
-      //   href: 'https://tapswap.gitbook.io/tapswap/security/contracts',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'Transparency',
-      //   href: 'https://tapswap.gitbook.io/tapswap/transparency/transparency',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'PancakeSwap',
-      //   href: 'https://pancakeswap.info/token/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'Dapp.com',
-      //   href: 'https://www.dapp.com/app/tapswap-exchange',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'Dappradar.com',
-      //   href: 'https://dappradar.com/binance-smart-chain/defi/tapswap',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'Bsc.news',
-      //   href: 'https://www.bsc.news/bsc-projects',
-      //   target: '_blank',
-      // },
-      // {
-      //   label: 'CoinGecko',
-      //   href: 'https://www.coingecko.com/en/coins/tapswaptoken',
-      // },
-      // {
-      //   label: 'CoinMarketCap',
-      //   href: 'https://coinmarketcap.com/currencies/tapswaptoken/',
-      // },
-    ],
+    href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
+    // items: [
+    //   {
+    //     label: 'Token',
+    //     href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
+    //     target: '_blank',
+    //   },
+    //   // {
+    //   //   label: 'Contracts',
+    //   //   href: 'https://tapswap.gitbook.io/tapswap/security/contracts',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'Transparency',
+    //   //   href: 'https://tapswap.gitbook.io/tapswap/transparency/transparency',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'PancakeSwap',
+    //   //   href: 'https://pancakeswap.info/token/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'Dapp.com',
+    //   //   href: 'https://www.dapp.com/app/tapswap-exchange',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'Dappradar.com',
+    //   //   href: 'https://dappradar.com/binance-smart-chain/defi/tapswap',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'Bsc.news',
+    //   //   href: 'https://www.bsc.news/bsc-projects',
+    //   //   target: '_blank',
+    //   // },
+    //   // {
+    //   //   label: 'CoinGecko',
+    //   //   href: 'https://www.coingecko.com/en/coins/tapswaptoken',
+    //   // },
+    //   // {
+    //   //   label: 'CoinMarketCap',
+    //   //   href: 'https://coinmarketcap.com/currencies/tapswaptoken/',
+    //   // },
+    // ],
   },
   // {
   //   label: 'IFO',

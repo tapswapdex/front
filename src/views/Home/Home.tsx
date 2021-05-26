@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout, Button } from '@pancakeswap-libs/uikit'
+import { Heading, Text, BaseLayout, Button, Dropdown } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { Link } from 'react-router-dom'
 import config from 'components/Menu/config'
@@ -96,26 +96,26 @@ const Home: React.FC = () => {
   return (
     <>
       <Header>
-      <Heading as="h1" size="xl" color="secondary" mb="24px" style={{
-          display: 'flex',
-          justifyContent: 'space-evenly'
-        }}>
-           {config.map((item) => {
-             console.log(item.icon);
-             
-             return <Link to="/"><BushIcon />{item.label}</Link>
-           })}
-        </Heading>
-        <Heading as="h1" size="xl" color="secondary" mb="24px" style={{
-          display: 'flex',
-          justifyContent: 'center'
-        }}>
+        <Heading
+          as="h1"
+          size="xl"
+          color="secondary"
+          mb="24px"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           {TranslateString(578, 'AMM +Yield Aggregator on Binance Smartchain.')}
         </Heading>
-        <Heading size="lg" color="text" style={{
-          display: 'flex',
-          justifyContent: 'space-evenly'
-        }}>
+        <Heading
+          size="lg"
+          color="text"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+          }}
+        >
           <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
             <Button variant="primary">
               {TranslateString(733, 'BUY')} <img src="/images/farms/taps.png" alt="TAPS Token" width="70" height="70" />{' '}
@@ -123,9 +123,7 @@ const Home: React.FC = () => {
             </Button>
           </a>
           <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
-            <Button variant="primary">
-            Launch App
-            </Button>
+            <Button variant="primary">Launch App</Button>
           </a>
         </Heading>
       </Header>

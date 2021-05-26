@@ -411,12 +411,12 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <>
       <Header>
-        <Heading as="h1" size="xxl" color="secondary" mb="24px">
+        <Heading as="h1" size="xxl" color="secondary" mb="24px" textAlign="center">
           {tokenMode
             ? TranslateString(10002, 'Stake tokens to earn TAPS')
             : TranslateString(320, 'Stake LP tokens to earn TAPS')}
         </Heading>
-        <Heading size="lg" color="text">
+        <Heading size="lg" color="text" textAlign="center">
           {TranslateString(10000, 'Deposit Fee will be used to buyback TAPS')}
         </Heading>
         {/* <Text>

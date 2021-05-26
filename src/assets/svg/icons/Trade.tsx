@@ -1,8 +1,7 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import { Svg } from "@pancakeswap-libs/uikit";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: any = (props) => {
   return (
     <Svg viewBox="0 0 24 24" {...props}>
       <path

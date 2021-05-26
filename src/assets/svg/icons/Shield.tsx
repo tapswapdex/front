@@ -1,8 +1,7 @@
 import React from "react";
-import Svg from "../../../components/Svg/Svg";
-import { SvgProps } from "../../../components/Svg/types";
+import { Svg } from "@pancakeswap-libs/uikit";
 
-const Icon: React.FC<SvgProps> = (props) => {
+const Icon: any = (props) => {
   return (
     <Svg viewBox="-60 -30 600 600" width="24px" color="text" {...props}>
       <g id="surface1">

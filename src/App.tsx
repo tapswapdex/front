@@ -12,6 +12,7 @@ import PageLoader from './components/PageLoader'
 import EasterEgg from './components/EasterEgg'
 import GlobalCheckBullHiccupClaimStatus from './views/Collectibles/components/GlobalCheckBullHiccupClaimStatus'
 import history from './routerHistory'
+import './index.css'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
@@ -37,24 +38,25 @@ const App: React.FC = () => {
     <Router history={history}>
       <ResetCSS />
       <GlobalStyle />
-        <Suspense fallback={<PageLoader />}>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/farms">
-              <Farms />
-            </Route>
-            <Route path="/pools">
-              <Farms tokenMode />
-            </Route>
-            <Route path="/bush">
-              <Bush />
-            </Route>
-            {/* 404 */}
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
+      <Suspense fallback={<PageLoader />}>
+        <Menu />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/farms">
+            <Farms />
+          </Route>
+          <Route path="/pools">
+            <Farms tokenMode />
+          </Route>
+          <Route path="/bush">
+            <Bush />
+          </Route>
+          {/* 404 */}
+          <Route component={NotFound} />
+        </Switch>
+      </Suspense>
       <EasterEgg iterations={2} />
       <ToastListener />
       <GlobalCheckBullHiccupClaimStatus />

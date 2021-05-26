@@ -1,6 +1,5 @@
 import { Svg } from "@pancakeswap-libs/uikit";
 
-
 const Icon: any = (props) => {
   return (
     <Svg viewBox="0 0 24 24" {...props}>
