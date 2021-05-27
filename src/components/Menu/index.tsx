@@ -1,44 +1,53 @@
 import React, { Component, Props, useContext } from 'react'
-import { Dropdown, Heading, Menu as UikitMenu } from '@pancakeswap-libs/uikit'
+import { Button, ConnectorNames, Dropdown, Heading, Menu as UikitMenu, useWalletModal } from '@pancakeswap-libs/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
+import { connectorsByName } from 'utils/web3React'
 import { Link } from 'react-router-dom'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
+
+import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd, useProfile } from 'state/hooks'
 import config from './config'
 
 const Menu = (props) => {
-  const { account } = useWeb3React()
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
   const { profile } = useProfile()
 
-  // return (
-  //   <UikitMenu
-  //     account={account}
-  //     login={login}
-  //     logout={logout}
-  //     isDark={isDark}
-  //     toggleTheme={toggleTheme}
-  //     currentLang={selectedLanguage && selectedLanguage.code}
-  //     langs={allLanguages}
-  //     setLang={setSelectedLanguage}
-  //     cakePriceUsd={cakePriceUsd.toNumber()}
-  //     links={config}
-  //     profile={{
-  //       username: profile?.username,
-  //       image: profile?.nft ? `/images/nfts/${profile.nft?.images.sm}` : undefined,
-  //       profileLink: '/profile',
-  //       noProfileLink: '/profile',
-  //       showPip: !profile?.username,
-  //     }}
-  //     {...props}
-  //   />
-  // )
+  const TranslateString = useI18n()
+  const { account, activate, deactivate } = useWeb3React()
+
+  const handleLogin = (connectorId: ConnectorNames) => {
+    const connector = connectorsByName[connectorId]
+    if (connector) {
+      activate(connector)
+    }
+  }
+
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(handleLogin, deactivate, account as string)
+  const connect = () => {
+    onPresentConnectModal()
+  }
+
+  const truncateAccountName = (accountName: string) => {
+    const firstSlice = accountName.slice(0, 4)
+
+    const lastSlice = accountName.slice(accountName.length - 4, accountName.length)
+    console.log(accountName, lastSlice)
+    return `${firstSlice}...${lastSlice}`
+  }
+
+  const RenderConnectButton = (
+    <Button onClick={account !== undefined ? onPresentAccountModal : connect} height="50">
+      {account !== undefined ? truncateAccountName(account) : 'Connect'}
+    </Button>
+  )
+
   return (
     <Heading
       as="h1"
@@ -84,6 +93,7 @@ const Menu = (props) => {
           </Link>
         )
       })}
+      {RenderConnectButton}
     </Heading>
   )
 }

@@ -70,6 +70,7 @@ const config: AppMenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
+    target: '_blank'
     // items: [
     //   {
     //     label: 'Token',

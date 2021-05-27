@@ -47,6 +47,11 @@
   text-shadow: rgb(161 164 255) 0px 0px 12px;
 }
 
+.sc-gsTCUz{
+  display: flex;
+  align-items: center;
+}
+
 @keyframes blink {
   0% {
     box-shadow: none;
