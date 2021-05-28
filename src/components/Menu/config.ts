@@ -36,7 +36,7 @@ const config: AppMenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Pools',
+    label: 'Oasis Pool',
     icon: 'PoolIcon',
     href: '/pools',
   },
