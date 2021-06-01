@@ -224,6 +224,40 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 33,
+    isPsc: true,
+    isTokenOnly: true,
+    lpSymbol: 'BSC  ',
+    lpAddresses: {
+      97: '',
+      56: '0xa643e30c957ca5a1e176da169a1be7afdc1bda16', // BSC-BNB BLP
+    },
+    tokenSymbol: 'BSC',
+    tokenAddresses: {
+      97: '',
+      56: '0xf5128928f85f16bd67c1e02ddd1b47a71d17adf5', // BSC
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 34,
+    isApe: false,
+    isTokenOnly: false,
+    lpSymbol: 'BSC-BNB Locked LP',
+    lpAddresses: {
+      97: '',
+      56: '0xa643e30c957ca5a1e176da169a1be7afdc1bda16',
+    },
+    tokenSymbol: 'BSC',
+    tokenAddresses: {
+      97: '',
+      56: '0xf5128928f85F16bD67C1E02DdD1b47A71d17aDF5',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
     pid: 22,
     isApe: true,
     isTokenOnly: false,
@@ -240,7 +274,146 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
+  {
+    pid: 30,
+    isApe: true,
+    isTokenOnly: false,
+    lpSymbol: 'BANANA-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0xf65c1c0478efde3c19b49ecbe7acc57bb6b1d713',
+    },
+    tokenSymbol: 'BANANA',
+    tokenAddresses: {
+      97: '',
+      56: '0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 31,
+    isApe: true,
+    isTokenOnly: false,
+    lpSymbol: 'BAKE-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0xc1c7a1d33b34019f82808f64ba07e77512a13d1a',
+    },
+    tokenSymbol: 'BAKE',
+    tokenAddresses: {
+      97: '',
+      56: '0xe02df9e3e622debdd69fb838bb799e3f168902c5',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
   
+
+
+  {
+    pid: 23,
+    isApe: true,
+    isTokenOnly: false,
+    lpSymbol: 'MATIC-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0x0A79586aE8d07a5739A99b5334983620040Fa76F',
+    },
+    tokenSymbol: 'MATIC',
+    tokenAddresses: {
+      97: '',
+      56: '0xcc42724c6683b7e57334c4e856f4c9965ed682bd',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 24,
+    isPsc: true,
+    isTokenOnly: true,
+    lpSymbol: 'MATIC',
+    lpAddresses: {
+      97: '',
+      56: '0x29A4A3D77c010CE100A45831BF7e798f0f0B325D', // MATIC-BNB
+    },
+    tokenSymbol: 'MATIC',
+    tokenAddresses: {
+      97: '',
+      56: '0xcc42724c6683b7e57334c4e856f4c9965ed682bd', // MATIC
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 25,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'BAKE',
+    lpAddresses: {
+      97: '',
+      56: '0xc1C7a1D33B34019F82808F64bA07e77512a13d1A', // BAKE-BNB
+    },
+    tokenSymbol: 'BAKE',
+    tokenAddresses: {
+      97: '',
+      56: '0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5', // BAKE
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 26,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'XRP',
+    lpAddresses: {
+      97: '',
+      56: '0x6f0f18f5fcC1466ec41c8106689e10BeFE68D1c0', // XRP-BNB
+    },
+    tokenSymbol: 'XRP',
+    tokenAddresses: {
+      97: '',
+      56: '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe', // XRP
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  
+  {
+    pid: 28,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'DOGE',
+    lpAddresses: {
+      97: '',
+      56: '0xfd1ef328A17A8e8Eeaf7e4Ea1ed8a108E1F2d096', // DOGE-BNB
+    },
+    tokenSymbol: 'DOGE',
+    tokenAddresses: {
+      97: '',
+      56: '0xba2ae424d960c26247dd6c32edc70b295c744c43', // DOGE
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 29,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'BANANA',
+    lpAddresses: {
+      97: '',
+      56: '0xF65C1C0478eFDe3c19b49EcBE7ACc57BB6B1D713', // BANANA-BNB
+    },
+    tokenSymbol: 'BANANA',
+    tokenAddresses: {
+      97: '',
+      56: '0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95', // BANANA
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
 ]
 
 export default farms
