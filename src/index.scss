@@ -1,0 +1,69 @@
+body {
+    font-family: Sans-serif;
+    background: #555;
+  }
+
+  .sc-fxFQKN{
+    height: 110px;
+    border-spacing: 0 15px !important;
+  }
+  .sc-jLqRGG:hover {
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca,
+      0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+    -webkit-animation: blink 0.7s infinite alternate;
+    // animation: blink 0.7s infinite alternate;
+  }
+  tr:hover{
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca, 0 0 24px #0ba9ca, 0 0 48px #0ba9ca;
+  }
+
+  .sc-iueNdr{
+    border-spacing: 0 15px !important;
+  }
+
+  .sc-hoPuav{
+    width: 800px !important;
+  }
+
+  .glow, .sc-Jgsit {
+    /*margin-top: 100px;*/
+    text-align: center;
+    display: block;
+    margin: 120px 0;
+  }
+  .glow span {
+    border-radius: 25px;
+    color: #fff;
+    box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca,
+      0 0 40px #0ba9ca, 0 0 50px #0ba9ca;
+    -webkit-animation: blink 0.7s infinite alternate;
+    // animation: blink 0.7s infinite alternate;
+  }
+  
+  .glow .text {
+    font-size: 18px;
+    padding: 15px;
+    font-weight: 800;
+  }
+  .text > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+  }
+  .text > a:hover {
+    background: transparent !important;
+  }
+  @-webkit-keyframes blink {
+    100% {
+      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+        0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
+    }
+  }
+  
+  @keyframes blink {
+    100% {
+      box-shadow: 0 0 3px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ba9ca,
+        0 0 70px #0ba9ca, 0 0 80px #0ba9ca;
+    }
+  }

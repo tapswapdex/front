@@ -37,6 +37,7 @@ const EarnAPYCard: React.FC = () => {
 
   const getHighestAPY = () => {
     const activeFarms = farmsLP.filter((farm) => !farm.isTokenOnly && farm.pid !== 0 && farm.multiplier !== '0X')
+    console.log('Active farms', activeFarms)
 
     calculateAPY(activeFarms)
 

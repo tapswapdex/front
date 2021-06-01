@@ -91,7 +91,13 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
   const handleRenderRow = () => {
     if (!isXs) {
       return (
-        <StyledTr onClick={toggleActionPanel}>
+        <StyledTr
+          onClick={toggleActionPanel}
+          style={{
+            boxShadow: actionPanelToggled ? `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca` : ``,
+            zIndex: 9999999999,
+          }}
+        >
           {Object.keys(props).map((key) => {
             if (columnNames.indexOf(key) === -1) {
               return null
@@ -180,8 +186,13 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
     <>
       {handleRenderRow()}
       {actionPanelToggled && details && (
-        <tr>
-          <td colSpan={7}>
+        <tr
+          style={{
+            boxShadow: actionPanelToggled ? `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca` : ``,
+            zIndex: 9999999999,
+          }}
+        >
+          <td colSpan={12}>
             <ActionPanel {...props} />
           </td>
         </tr>

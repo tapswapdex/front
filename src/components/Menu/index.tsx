@@ -1,5 +1,13 @@
 import React, { Component, Props, useContext } from 'react'
-import { Button, ConnectorNames, Dropdown, Heading, Menu as UikitMenu, useWalletModal } from '@pancakeswap-libs/uikit'
+import {
+  Button,
+  ConnectorNames,
+  Dropdown,
+  Heading,
+  Menu as UikitMenu,
+  Toggle,
+  useWalletModal,
+} from '@pancakeswap-libs/uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
@@ -11,6 +19,9 @@ import useAuth from 'hooks/useAuth'
 import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd, useProfile } from 'state/hooks'
 import config from './config'
+import sun from '../../assets/svg/sun.svg'
+import moon from '../../assets/svg/moon.svg'
+import tapswapLogo from '../../assets/img/logo.png'
 
 const Menu = (props) => {
   const { login, logout } = useAuth()
@@ -38,7 +49,6 @@ const Menu = (props) => {
     const firstSlice = accountName.slice(0, 4)
 
     const lastSlice = accountName.slice(accountName.length - 4, accountName.length)
-    console.log(accountName, lastSlice)
     return `${firstSlice}...${lastSlice}`
   }
 
@@ -46,6 +56,59 @@ const Menu = (props) => {
     <Button onClick={account !== undefined ? onPresentAccountModal : connect} height="50">
       {account !== undefined ? truncateAccountName(account) : 'Connect'}
     </Button>
+  )
+
+  const switchToDark = () => {
+    if (!isDark) {
+      toggleTheme()
+    }
+  }
+
+  const switchToLight = () => {
+    if (isDark) {
+      toggleTheme()
+    }
+  }
+
+  const RenderSwitchTheme = (
+    <>
+      <div>
+        <button
+          onClick={switchToDark}
+          type="button"
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <img src={moon} alt="" />
+        </button>
+        <span style={{ fontSize: '25px' }}>/</span>
+        <button
+          onClick={switchToLight}
+          type="button"
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          <img src={sun} alt="" />
+        </button>
+      </div>
+    </>
+  )
+
+  const RenderLogo = (
+    <img
+      src={tapswapLogo}
+      alt=""
+      style={{
+        marginLeft: '-2%',
+        width: '10%',
+      }}
+    />
   )
 
   return (
@@ -60,6 +123,7 @@ const Menu = (props) => {
         justifyContent: 'space-evenly',
       }}
     >
+      {RenderLogo}
       {config.map((item) => {
         if (item.href && item.href.includes('http')) {
           return (
@@ -94,6 +158,7 @@ const Menu = (props) => {
         )
       })}
       {RenderConnectButton}
+      {RenderSwitchTheme}
     </Heading>
   )
 }
