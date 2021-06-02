@@ -19,9 +19,9 @@
 
 .navbar-item{
   font-size: 18px;
-  text-shadow: rgb(161 164 255) 0px 0px 20px;
   background-color: transparent;
   cursor: pointer;
+  font-weight: 400 !important;
 }
 
 .navbar-item-dropdown-item{

@@ -128,7 +128,14 @@ const Menu = (props) => {
       {config.map((item) => {
         if (item.href && item.href.includes('http')) {
           return (
-            <a className="navbar-item" href={item.href} target={item.target} style={{}}>
+            <a
+              className="navbar-item"
+              href={item.href}
+              target={item.target}
+              style={{
+                color: isDark ? 'aqua' : '#d2004c',
+              }}
+            >
               {item.iconComponent && item.iconComponent}
               {item.label}
             </a>
@@ -139,10 +146,29 @@ const Menu = (props) => {
           console.log(item.items)
 
           return (
-            <Dropdown target={<h4 className="navbar-item">More</h4>}>
+            <Dropdown
+              target={
+                <h4
+                  className="navbar-item"
+                  style={{
+                    color: isDark ? 'aqua' : '#d2004c',
+                  }}
+                >
+                  More
+                </h4>
+              }
+            >
               {item.items.map(({ href, label, target }) => {
                 return (
-                  <a className="navbar-item" href={href} target={target} style={{}}>
+                  <a
+                    className="navbar-item"
+                    href={href}
+                    target={target}
+                    style={{
+                      color: isDark ? 'aqua' : '#d2004c',
+                      marginBottom: '20px',
+                    }}
+                  >
                     {label}
                   </a>
                 )
@@ -152,7 +178,14 @@ const Menu = (props) => {
         }
 
         return (
-          <Link className="navbar-item" to={item.href} target={item.target} style={{}}>
+          <Link
+            className="navbar-item"
+            to={item.href}
+            target={item.target}
+            style={{
+              color: isDark ? 'aqua' : '#d2004c',
+            }}
+          >
             {item.iconComponent && item.iconComponent}
             {item.label}
           </Link>

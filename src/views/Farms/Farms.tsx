@@ -17,6 +17,7 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { orderBy } from 'lodash'
 import Faq from 'react-faq-component'
 
+import useTheme from 'hooks/useTheme'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import Table from './components/FarmTable/FarmTable'
 import FarmTabButtons from './components/FarmTabButtons'
@@ -175,6 +176,8 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const [apePrice, setApePrice] = useState(0)
   const apeReserve = useApePrice()
   apeReserve.then(setApePrice)
+
+  const { isDark } = useTheme()
 
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
@@ -411,13 +414,24 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   return (
     <>
       <Header>
-        <Heading as="h1" size="xxl" color="secondary" mb="24px" textAlign="center">
+        <Heading
+          as="h1"
+          size="xxl"
+          color="secondary"
+          mb="24px"
+          textAlign="center"
+          style={{
+            fontWeight: 'lighter',
+            letterSpacing: '1.5px',
+            textShadow: isDark ? 'aqua 0 0 5px' : '#d2004c 0 0 6px',
+          }}
+        >
           {tokenMode
             ? TranslateString(10002, 'Stake tokens to earn TAPS')
-            : TranslateString(320, 'Stake LP tokens to earn TAPS')}
+            : TranslateString(320, 'Stake LP tokens to earn $TAPS')}
         </Heading>
         <Heading size="lg" color="text" textAlign="center">
-          {TranslateString(10000, 'Deposit Fee will be used to buyback TAPS')}
+          {TranslateString(10000, 'Maximize Yield by Farming')}
         </Heading>
         {/* <Text>
           <AddressLink

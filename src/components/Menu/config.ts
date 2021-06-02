@@ -31,7 +31,7 @@ const config: AppMenuEntry[] = [
     // ],
   },
   {
-    label: 'Farms',
+    label: 'Lake Farms',
     icon: 'FarmIcon',
     href: '/farms',
   },
