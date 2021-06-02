@@ -4,6 +4,7 @@ import { FarmWithStakedValue } from 'views/Farms/components/FarmCard/FarmCard'
 import { useMatchBreakpoints } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
+import useTheme from 'hooks/useTheme'
 import Apr, { AprProps } from './Apr'
 import Farm, { FarmProps } from './Farm'
 import Earned, { EarnedProps } from './Earned'
@@ -87,6 +88,45 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
   const isMobile = !isXl
   const tableSchema = isMobile ? MobileColumnSchema : DesktopColumnSchema
   const columnNames = tableSchema.map((column) => column.name)
+  const [rowHovered, setRowHovered] = useState(false)
+  const [actionPanelHovered, setActionPanelHovered] = useState(false)
+  const { isDark } = useTheme()
+
+  const currentBoxShadow = isDark
+    ? `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca, 0 0 40px #0ba9ca, 0 0 50px #0ba9ca`
+    : `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #be259e,
+  0 0 40px #be259e, 0 0 50px #be259e`
+
+  const handleOnRowMouseEvents = ({ type }) => {
+    console.log(type)
+
+    if (type === 'mouseover') {
+      setRowHovered(true)
+    }
+
+    if (type === 'mouseout') {
+      setRowHovered(false)
+    }
+  }
+
+  const handleOnActionPanelMouseEvents = ({ type }) => {
+    if (type === 'mouseover') {
+      setActionPanelHovered(true)
+    }
+
+    if (type === 'mouseout') {
+      setActionPanelHovered(false)
+    }
+  }
+
+  const rowStyles = () => {
+    if (rowHovered) {
+      return {
+        boxShadow: currentBoxShadow,
+      }
+    }
+    return {}
+  }
 
   const handleRenderRow = () => {
     if (!isXs) {
@@ -94,9 +134,14 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
         <StyledTr
           onClick={toggleActionPanel}
           style={{
-            boxShadow: actionPanelToggled ? `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca` : ``,
+            boxShadow: actionPanelToggled ? currentBoxShadow : ``,
             zIndex: 9999999999,
+            ...rowStyles(),
           }}
+          onFocus={handleOnRowMouseEvents}
+          onBlur={handleOnRowMouseEvents}
+          onMouseOver={handleOnRowMouseEvents}
+          onMouseOut={handleOnRowMouseEvents}
         >
           {Object.keys(props).map((key) => {
             if (columnNames.indexOf(key) === -1) {
@@ -188,9 +233,11 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
       {actionPanelToggled && details && (
         <tr
           style={{
-            boxShadow: actionPanelToggled ? `0 0 2px #fff, 0 0 4px #fff, 0 0 8px #0ba9ca, 0 0 12px #0ba9ca` : ``,
+            boxShadow: actionPanelToggled ? currentBoxShadow : ``,
             zIndex: 9999999999,
           }}
+          onFocus={handleOnActionPanelMouseEvents}
+          onBlur={handleOnActionPanelMouseEvents}
         >
           <td colSpan={12}>
             <ActionPanel {...props} />

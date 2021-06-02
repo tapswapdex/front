@@ -22,6 +22,7 @@ import config from './config'
 import sun from '../../assets/svg/sun.svg'
 import moon from '../../assets/svg/moon.svg'
 import tapswapLogo from '../../assets/img/logo.png'
+import tapswapLogoDark from '../../assets/img/logo-dark.png'
 
 const Menu = (props) => {
   const { login, logout } = useAuth()
@@ -102,7 +103,7 @@ const Menu = (props) => {
 
   const RenderLogo = (
     <img
-      src={tapswapLogo}
+      src={isDark ? tapswapLogo : tapswapLogoDark}
       alt=""
       style={{
         marginLeft: '-2%',
