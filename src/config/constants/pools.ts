@@ -14,7 +14,7 @@ const pools: PoolConfig[] = [
       56: '0x600a04123C354D0c462C84BB6FdDE51048Ea1Ef9',
     },
     poolCategory: PoolCategory.CORE,
-    projectLink: 'https://tapswap.money',
+    projectLink: 'https://tapswap.finance',
     harvest: true,
     tokenPerBlock: '0.00496031746',
     sortOrder: 999,

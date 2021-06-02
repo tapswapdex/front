@@ -16,17 +16,17 @@ const config: AppMenuEntry[] = [
   {
     label: 'Trade',
     icon: 'TradeIcon',
-    href:"https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C",
+    href:"https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C",
     // items: [
     //   {
     //     label: 'Exchange',
     //     href:
-    //       'https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    //       'https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
     //   },
     //   {
     //     label: 'Liquidity',
     //     href:
-    //       'https://swape.tapswap.money/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    //       'https://swape.tapswap.finance/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
     //   },
     // ],
   },
@@ -48,7 +48,7 @@ const config: AppMenuEntry[] = [
   // {
   //   label: 'Techrate Audit',
   //   icon: 'ShieldIcon',
-  //   href: 'https://tapswap.money/files/audit_techrate.pdf',
+  //   href: 'https://tapswap.finance/files/audit_techrate.pdf',
   //   target: '_blank',
   // },
   // {
