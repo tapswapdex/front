@@ -1,4 +1,4 @@
-import React, { Component, Props, useContext } from 'react'
+import React, { Component, Props, useContext, useEffect, useState } from 'react'
 import {
   Button,
   ConnectorNames,
@@ -8,16 +8,18 @@ import {
   Toggle,
   useWalletModal,
 } from '@pancakeswap-libs/uikit'
+import { ProSidebar, Menu as ProMenu, MenuItem, SubMenu, SidebarHeader } from 'react-pro-sidebar'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
 import { connectorsByName } from 'utils/web3React'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import useTheme from 'hooks/useTheme'
 import useAuth from 'hooks/useAuth'
 
 import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd, useProfile } from 'state/hooks'
+import { AlignLeft } from 'react-feather'
 import config from './config'
 import sun from '../../assets/svg/sun.svg'
 import moon from '../../assets/svg/moon.svg'
@@ -32,6 +34,7 @@ const Menu = (props) => {
   const { profile } = useProfile()
 
   const TranslateString = useI18n()
+  const { push } = useHistory()
   const { account, activate, deactivate } = useWeb3React()
 
   const handleLogin = (connectorId: ConnectorNames) => {
@@ -71,6 +74,19 @@ const Menu = (props) => {
     }
   }
 
+  const [width, setWidth] = useState<number>(window.innerWidth)
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange)
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange)
+    }
+  }, [])
+
+  const isMobile = width <= 768
+
   const RenderSwitchTheme = (
     <>
       <div>
@@ -106,13 +122,128 @@ const Menu = (props) => {
       src={isDark ? tapswapLogo : tapswapLogoDark}
       alt=""
       style={{
-        marginLeft: '-2%',
-        width: '10%',
+        marginLeft: isMobile ? '4%' : '-2%',
+        width: isMobile ? '50%' : '10%',
       }}
     />
   )
 
-  return (
+  const RenderMobileLogo = (
+    <img
+      src={tapswapLogo}
+      alt=""
+      style={{
+        marginLeft: isMobile ? '4%' : '-2%',
+        width: isMobile ? '50%' : '10%',
+      }}
+    />
+  )
+
+  const [collapsed, setCollapsed] = useState(true)
+
+  const RenderMobileSideBar = (
+    <ProSidebar toggled collapsed={collapsed} style={{ position: 'fixed', maxWidth: '5px', height: '100vh' }}>
+      <SidebarHeader
+        style={{ padding: '10px', display: 'flex', justifyContent: 'space-between', height: collapsed ? '20px' : '' }}
+      >
+        {!collapsed && RenderMobileLogo}
+
+        <AlignLeft
+          onClick={() => {
+            setCollapsed(!collapsed)
+          }}
+        />
+      </SidebarHeader>
+      {!collapsed && (
+        <ProMenu iconShape="square">
+          {config.map((item) => {
+            if (item.href && item.href.includes('http')) {
+              return (
+                <MenuItem>
+                  <a
+                    className="navbar-item"
+                    href={item.href}
+                    target={item.target}
+                    style={{
+                      color: isDark ? 'aqua' : '#d2004c',
+                    }}
+                  >
+                    {item.iconComponent && item.iconComponent}
+                    {item.label}
+                  </a>
+                </MenuItem>
+              )
+            }
+
+            if (item.items && item.items.length > 0) {
+              return (
+                <SubMenu
+                  title="More"
+                  className="navbar-item"
+                  style={{
+                    color: isDark ? 'aqua' : '#d2004c',
+                  }}
+                >
+                  {item.items.map(({ href, label, target }) => {
+                    return (
+                      <MenuItem>
+                        {' '}
+                        <a
+                          className="navbar-item"
+                          href={href}
+                          target={target}
+                          style={{
+                            color: isDark ? 'aqua' : '#d2004c',
+                            marginBottom: '20px',
+                          }}
+                        >
+                          {label}{' '}
+                        </a>
+                      </MenuItem>
+                    )
+                  })}
+                </SubMenu>
+              )
+            }
+
+            return (
+              <MenuItem
+                className="navbar-item"
+                style={{
+                  color: isDark ? 'aqua' : '#d2004c',
+                }}
+                onClick={() => {
+                  push(item.href)
+                }}
+              >
+                {' '}
+                {item.iconComponent && item.iconComponent}
+                {item.label}
+              </MenuItem>
+            )
+          })}
+          <div
+            style={{
+              marginTop: '5%',
+              marginLeft: '5%',
+            }}
+          >
+            {RenderConnectButton}
+          </div>
+          <div
+            style={{
+              marginTop: '5%',
+              marginLeft: '5%',
+            }}
+          >
+            {RenderSwitchTheme}
+          </div>
+        </ProMenu>
+      )}
+    </ProSidebar>
+  )
+
+  const RenderDesktopSidebar = (
     <Heading
       as="h1"
       size="xl"
@@ -143,8 +274,6 @@ const Menu = (props) => {
         }
 
         if (item.items && item.items.length > 0) {
-          console.log(item.items)
-
           return (
             <Dropdown
               target={
@@ -195,6 +324,8 @@ const Menu = (props) => {
       {RenderSwitchTheme}
     </Heading>
   )
+
+  return isMobile ? RenderMobileSideBar : RenderDesktopSidebar
 }
 
 export default Menu

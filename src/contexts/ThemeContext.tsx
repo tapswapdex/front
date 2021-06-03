@@ -7,7 +7,7 @@ const CACHE_KEY = 'IS_DARK'
 const ThemeContext = React.createContext({ isDark: null, toggleTheme: () => null })
 
 const ThemeContextProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   const toggleTheme = () => {
     setIsDark((prevState) => {

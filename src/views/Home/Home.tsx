@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Heading, Text, BaseLayout, Button, Dropdown } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
@@ -14,6 +14,7 @@ import EarnAPYCard from 'views/Home/components/EarnAPYCard'
 import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import TwitterCard from 'views/Home/components/TwitterCard'
 import ListedOn from 'views/Home/components/ListedOn'
+import { CheckCircle } from 'react-feather'
 import AuditCard from './components/AuditCard'
 
 const Hero = styled.div`
@@ -92,6 +93,18 @@ const Header = styled.div`
 
 const Home: React.FC = () => {
   const TranslateString = useI18n()
+  const [width, setWidth] = useState<number>(window.innerWidth)
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange)
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange)
+    }
+  }, [])
+
+  const isMobile = width <= 768
 
   return (
     <>
@@ -143,6 +156,47 @@ const Home: React.FC = () => {
             <ListedOn />
             <AuditCard />
           </Cards>
+        </div>
+        <div
+          style={{
+            width: isMobile ? '40vw' : '8vw',
+            position: 'fixed',
+            zIndex: 99999999999,
+            bottom: '1%',
+            left: isMobile ? '4%' : '2%',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              color="green"
+              src="https://d33wubrfki0l68.cloudfront.net/dfe9e8524c40923c3f0e2d34b1b939aa411e79f4/404e7/img/certik-logo-w-small.svg"
+              width="30px"
+              alt=""
+            />
+            <h1
+              style={{
+                color: '#4acaa4',
+              }}
+            >
+              Certik
+            </h1>
+            <h1 style={{ color: 'white' }}>
+              <CheckCircle />
+            </h1>
+            <h1
+              style={{
+                color: '#4acaa4',
+              }}
+            >
+              Skynet
+            </h1>
+          </div>
         </div>
       </Page>
     </>
