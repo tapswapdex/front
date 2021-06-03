@@ -20,10 +20,10 @@ const AuditCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="lg">Audited by</Heading>
+        <Heading size="lg">Security Oracle</Heading>
         <CardMidContent>
           <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
-            {/* <img src="/images/tapswap/shield.svg" height="24px" width="24px" alt="Certik" />  */}Certik Onboarded
+            {/* <img src="/images/tapswap/shield.svg" height="24px" width="24px" alt="Certik" />  */}Certik Skynet
           </LinkAudit>
           {/* <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
             Techrate

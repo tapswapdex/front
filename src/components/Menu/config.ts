@@ -159,7 +159,7 @@ const config: AppMenuEntry[] = [
       },
       {
         label: 'Telegram',
-        href: 'https://t.me/tapswapchat',
+        href: 'https://t.me/tapswapdex',
         target: '_blank',
       },
     ],

@@ -104,22 +104,22 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  {
-    pid: 14,
-    isApe: true,
-    lpSymbol: 'TAPS-BANANA LP',
-    lpAddresses: {
-      97: '',
-      56: '0x1beD49A495353C33eCfF62c32Ee590E65d513fDB',
-    },
-    tokenSymbol: 'TAPS',
-    tokenAddresses: {
-      97: '',
-      56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-    },
-    quoteTokenSymbol: QuoteToken.BANANA,
-    quoteTokenAdresses: contracts.banana,
-  },
+  // {
+  //   pid: 14,
+  //   isApe: true,
+  //   lpSymbol: 'TAPS-BANANA LP',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x1beD49A495353C33eCfF62c32Ee590E65d513fDB',
+  //   },
+  //   tokenSymbol: 'TAPS',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BANANA,
+  //   quoteTokenAdresses: contracts.banana,
+  // },
   {
     pid: 15,
     isApe: true,
@@ -379,24 +379,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  
-  {
-    pid: 28,
-    isApe: true,
-    isTokenOnly: true,
-    lpSymbol: 'DOGE',
-    lpAddresses: {
-      97: '',
-      56: '0xfd1ef328A17A8e8Eeaf7e4Ea1ed8a108E1F2d096', // DOGE-BNB
-    },
-    tokenSymbol: 'DOGE',
-    tokenAddresses: {
-      97: '',
-      56: '0xba2ae424d960c26247dd6c32edc70b295c744c43', // DOGE
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
+  // {
+  //   pid: 28,
+  //   isApe: true,
+  //   isTokenOnly: true,
+  //   lpSymbol: 'DOGE',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0xfd1ef328A17A8e8Eeaf7e4Ea1ed8a108E1F2d096', // DOGE-BNB
+  //   },
+  //   tokenSymbol: 'DOGE',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0xba2ae424d960c26247dd6c32edc70b295c744c43', // DOGE
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
   {
     pid: 29,
     isApe: true,
@@ -410,6 +409,23 @@ const farms: FarmConfig[] = [
     tokenAddresses: {
       97: '',
       56: '0x603c7f932ed1fc6575303d8fb018fdcbb0f39a95', // BANANA
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 36,
+    isApe: true,
+    isTokenOnly: false,
+    lpSymbol: 'JDI-BNB LP',
+    lpAddresses: {
+      97: '',
+      56: '0xfb6063f29AF6dcd1fc03A8E221c6D91DEabbE764',
+    },
+    tokenSymbol: 'JDI',
+    tokenAddresses: {
+      97: '',
+      56: '0x0491648c910ad2c1afaab733faf71d30313df7fc',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
