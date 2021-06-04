@@ -168,7 +168,7 @@ const Menu = (props) => {
                       color: isDark ? 'aqua' : '#d2004c',
                     }}
                   >
-                    {item.iconComponent && item.iconComponent}
+                    {item.svgIcon && item.svgIcon()}
                     {item.label}
                   </a>
                 </MenuItem>
@@ -177,32 +177,35 @@ const Menu = (props) => {
 
             if (item.items && item.items.length > 0) {
               return (
-                <SubMenu
-                  title="More"
-                  className="navbar-item"
-                  style={{
-                    color: isDark ? 'aqua' : '#d2004c',
-                  }}
-                >
-                  {item.items.map(({ href, label, target }) => {
-                    return (
-                      <MenuItem>
-                        {' '}
-                        <a
-                          className="navbar-item"
-                          href={href}
-                          target={target}
-                          style={{
-                            color: isDark ? 'aqua' : '#d2004c',
-                            marginBottom: '20px',
-                          }}
-                        >
-                          {label}{' '}
-                        </a>
-                      </MenuItem>
-                    )
-                  })}
-                </SubMenu>
+                <>
+                  <SubMenu
+                    title="More"
+                    className="navbar-item"
+                    style={{
+                      color: isDark ? 'aqua' : '#d2004c',
+                    }}
+                    icon={item.svgIcon()}
+                  >
+                    {item.items.map(({ href, label, target }) => {
+                      return (
+                        <MenuItem>
+                          {' '}
+                          <a
+                            className="navbar-item"
+                            href={href}
+                            target={target}
+                            style={{
+                              color: isDark ? 'aqua' : '#d2004c',
+                              marginBottom: '20px',
+                            }}
+                          >
+                            {label}{' '}
+                          </a>
+                        </MenuItem>
+                      )
+                    })}
+                  </SubMenu>
+                </>
               )
             }
 
@@ -217,7 +220,7 @@ const Menu = (props) => {
                 }}
               >
                 {' '}
-                {item.iconComponent && item.iconComponent}
+                {item.svgIcon && item.svgIcon()}
                 {item.label}
               </MenuItem>
             )
@@ -267,7 +270,7 @@ const Menu = (props) => {
                 color: isDark ? 'aqua' : '#d2004c',
               }}
             >
-              {item.iconComponent && item.iconComponent}
+              {item.svgIcon && item.svgIcon()}
               {item.label}
             </a>
           )
@@ -315,7 +318,7 @@ const Menu = (props) => {
               color: isDark ? 'aqua' : '#d2004c',
             }}
           >
-            {item.iconComponent && item.iconComponent}
+            {item.svgIcon && item.svgIcon()}
             {item.label}
           </Link>
         )

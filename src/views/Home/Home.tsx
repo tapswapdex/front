@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout, Button, Dropdown } from '@pancakeswap-libs/uikit'
+import { Heading, BaseLayout, Button } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
-import { Link } from 'react-router-dom'
-import config from 'components/Menu/config'
-import BushIcon from 'assets/svg/icons/Bush'
 
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
