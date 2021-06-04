@@ -1,9 +1,17 @@
-import React from 'react';
+
 import { MenuEntry } from '@pancakeswap-libs/uikit'
-import BushIcon from '../../assets/svg/icons/Bush'
+import DocumentIcon from 'assets/svg/icons/document'
+import ExchangeIcon from 'assets/svg/icons/exchange'
+import FarmsIcon from 'assets/svg/icons/farms'
+import FaucetIcon from 'assets/svg/icons/faucet'
+import HomeIcon from 'assets/svg/icons/home'
+import InfoIcon from 'assets/svg/icons/info'
+import MoreIcon from 'assets/svg/icons/more'
+import PoolsIcon from 'assets/svg/icons/pools'
+import SecurityIcon from 'assets/svg/icons/security'
 
 interface AppMenuEntry extends MenuEntry {
-  iconComponent?: any
+  svgIcon?: any
 }
 
 const config: AppMenuEntry[] = [
@@ -11,7 +19,7 @@ const config: AppMenuEntry[] = [
     label: 'Home',
     icon: 'HomeIcon',
     href: '/',
-    iconComponent: BushIcon
+    svgIcon: HomeIcon
   },
   {
     label: 'Trade',
@@ -29,21 +37,26 @@ const config: AppMenuEntry[] = [
     //       'https://swape.tapswap.money/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
     //   },
     // ],
+    svgIcon: ExchangeIcon
   },
   {
     label: 'Lake Farms',
     icon: 'FarmIcon',
     href: '/farms',
+    svgIcon: FarmsIcon
+   
   },
   {
     label: 'Oasis Pool',
     icon: 'PoolIcon',
     href: '/pools',
+    svgIcon: PoolsIcon
   },
   {
     label: 'Smart Faucet',
     icon: 'BushIcon',
     href: '/bush',
+    svgIcon: FaucetIcon
   },
   // {
   //   label: 'Techrate Audit',
@@ -70,7 +83,8 @@ const config: AppMenuEntry[] = [
     label: 'Info',
     icon: 'InfoIcon',
     href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
-    target: '_blank'
+    target: '_blank',
+    svgIcon: InfoIcon
     // items: [
     //   {
     //     label: 'Token',
@@ -127,12 +141,14 @@ const config: AppMenuEntry[] = [
     icon: 'ShieldIcon',
     href: 'https://www.certik.org/projects/tapswapfinance',
     target: '_blank',
+    svgIcon: SecurityIcon
   },
   {
     label: 'Docs',
     icon: 'DocIcon',
     href: 'https://tapswapmoney.gitbook.io',
     target: '_blank',
+    svgIcon: DocumentIcon
   },
   {
     label: 'More',
@@ -163,6 +179,7 @@ const config: AppMenuEntry[] = [
         target: '_blank',
       },
     ],
+    svgIcon: MoreIcon 
   },
 ]
 
