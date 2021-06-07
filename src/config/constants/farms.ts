@@ -430,6 +430,108 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
+  {
+    pid: 37,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'UNI',
+    lpAddresses: {
+      97: '',
+      56: '0x531b34E4e6F3ea3E05dee17EeA164b03cc328E23', // UNI-WBNB
+    },
+    tokenSymbol: 'UNI',
+    tokenAddresses: {
+      97: '',
+      56: '0xbf5140a22578168fd562dccf235e5d43a02ce9b1', // UNI
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 38,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'BIFI',
+    lpAddresses: {
+      97: '',
+      56: '0xDDd3f9d5Bd347c55D18752c0C2075698EC657750', // BIFI-BNB
+    },
+    tokenSymbol: 'BIFI',
+    tokenAddresses: {
+      97: '',
+      56: '0xCa3F508B8e4Dd382eE878A314789373D80A5190A', // BIFI
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 39,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'AUTO',
+    lpAddresses: {
+      97: '',
+      56: '0x649a5ad5135b4bd287e5aca8d41f4d5e1b52af5c', // AUTO-WBNB LP
+    },
+    tokenSymbol: 'AUTO',
+    tokenAddresses: {
+      97: '',
+      56: '0xa184088a740c695e156f91f5cc086a06bb78b827', // AUTO
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid:40 ,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'BUNNY',
+    lpAddresses: {
+      97: '',
+      56: '0xAa78E5580AE24e52d2841281AdA5B55fDd72c81a', // BUNNY-WBNB
+    },
+    tokenSymbol: 'BUNNY',
+    tokenAddresses: {
+      97: '',
+      56: '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51', // BUNNY
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid: 41,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'SPACE',
+    lpAddresses: {
+      97: '',
+      56: '0xd0f82498051067e154d1dcd3d88fa95063949d7e', // SPACE-BNB
+    },
+    tokenSymbol: 'SPACE',
+    tokenAddresses: {
+      97: '',
+      56: '0xe486a69e432fdc29622bf00315f6b34c99b45e80', // SPACE
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
+    pid:42 ,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'SWAMP',
+    lpAddresses: {
+      97: '',
+      56: '0xa3f0f63268df562c71051ac5e81460e857c32c12', // SWAMP-BNB
+    },
+    tokenSymbol: 'SWAMP',
+    tokenAddresses: {
+      97: '',
+      56: '0xc5a49b4cbe004b6fd55b30ba1de6ac360ff9765d', // SWAMP
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
 ]
 
 export default farms

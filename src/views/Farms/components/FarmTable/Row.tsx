@@ -98,8 +98,6 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
   0 0 40px #be259e, 0 0 50px #be259e`
 
   const handleOnRowMouseEvents = ({ type }) => {
-    console.log(type)
-
     if (type === 'mouseover') {
       setRowHovered(true)
     }
