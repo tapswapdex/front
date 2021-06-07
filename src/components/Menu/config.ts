@@ -146,7 +146,7 @@ const config: AppMenuEntry[] = [
   {
     label: 'Docs',
     icon: 'DocIcon',
-    href: 'https://tapswapmoney.gitbook.io',
+    href: 'https://tapswapmoney.gitbook.io/tapswap/security/contracts',
     target: '_blank',
     svgIcon: DocumentIcon
   },

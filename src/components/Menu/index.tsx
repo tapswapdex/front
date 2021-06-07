@@ -21,8 +21,8 @@ import useI18n from 'hooks/useI18n'
 import { usePriceCakeBusd, useProfile } from 'state/hooks'
 import { AlignLeft } from 'react-feather'
 import config from './config'
-import sun from '../../assets/svg/sun.svg'
-import moon from '../../assets/svg/moon.svg'
+import sun from '../../assets/svg/sun'
+import moon from '../../assets/svg/moon'
 import tapswapLogo from '../../assets/img/logo.png'
 import tapswapLogoDark from '../../assets/img/logo-dark.png'
 
@@ -99,7 +99,7 @@ const Menu = (props) => {
             cursor: 'pointer',
           }}
         >
-          <img src={moon} alt="" />
+          {moon()}
         </button>
         <span style={{ fontSize: '25px' }}>/</span>
         <button
@@ -111,7 +111,7 @@ const Menu = (props) => {
             cursor: 'pointer',
           }}
         >
-          <img src={sun} alt="" />
+          {sun()}
         </button>
       </div>
     </>
