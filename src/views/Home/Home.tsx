@@ -132,8 +132,8 @@ const Home: React.FC = () => {
               {TranslateString(734, 'TAPS Token Now!')}
             </Button>
           </a>
-          <a href="https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
-            <Button variant="primary">Launch App</Button>
+          <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
+            <Button variant="primary">Trade</Button>
           </a>
         </Heading>
       </Header>
