@@ -104,22 +104,22 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  // {
-  //   pid: 14,
-  //   isApe: true,
-  //   lpSymbol: 'TAPS-BANANA LP',
-  //   lpAddresses: {
-  //     97: '',
-  //     56: '0x1beD49A495353C33eCfF62c32Ee590E65d513fDB',
-  //   },
-  //   tokenSymbol: 'TAPS',
-  //   tokenAddresses: {
-  //     97: '',
-  //     56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-  //   },
-  //   quoteTokenSymbol: QuoteToken.BANANA,
-  //   quoteTokenAdresses: contracts.banana,
-  // },
+  {
+    pid: 14,
+    isApe: true,
+    lpSymbol: 'TAPS-BANANA LP',
+    lpAddresses: {
+      97: '',
+      56: '0x1beD49A495353C33eCfF62c32Ee590E65d513fDB',
+    },
+    tokenSymbol: 'TAPS',
+    tokenAddresses: {
+      97: '',
+      56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+    },
+    quoteTokenSymbol: QuoteToken.BANANA,
+    quoteTokenAdresses: contracts.banana,
+  },
   {
     pid: 15,
     isApe: true,
