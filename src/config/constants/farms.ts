@@ -482,7 +482,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
-    pid:40 ,
+    pid:42 ,
     isApe: true,
     isTokenOnly: true,
     lpSymbol: 'BUNNY',
@@ -499,7 +499,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
-    pid: 41,
+    pid: 40,
     isApe: true,
     isTokenOnly: true,
     lpSymbol: 'SPACE',
@@ -516,7 +516,7 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
-    pid:42 ,
+    pid:41 ,
     isApe: true,
     isTokenOnly: true,
     lpSymbol: 'SWAMP',
