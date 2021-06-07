@@ -24,6 +24,7 @@
   font-weight: 400 !important;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-item-dropdown-item{

@@ -146,7 +146,7 @@ const config: AppMenuEntry[] = [
   {
     label: 'Docs',
     icon: 'DocIcon',
-    href: 'https://tapswapmoney.gitbook.io/tapswap/security/contracts',
+    href: 'https://tapswapmoney.gitbook.io/tapswap-dex/security/contract',
     target: '_blank',
     svgIcon: DocumentIcon
   },
@@ -160,7 +160,7 @@ const config: AppMenuEntry[] = [
       // },
       {
         label: 'Github',
-        href: 'https://github.com/TapSwapV3',
+        href: 'https://github.com/tapswapdex',
         target: '_blank',
       },
       {
