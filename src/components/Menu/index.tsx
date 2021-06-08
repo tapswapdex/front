@@ -141,6 +141,10 @@ const Menu = (props) => {
 
   const [collapsed, setCollapsed] = useState(true)
 
+  const collapseNavBar = () => {
+    return setCollapsed(true)
+  }
+
   const RenderMobileSideBar = (
     <ProSidebar toggled collapsed={collapsed} style={{ position: 'fixed', maxWidth: '5px', height: '100vh' }}>
       <SidebarHeader
@@ -167,6 +171,7 @@ const Menu = (props) => {
                     style={{
                       color: isDark ? 'aqua' : '#d2004c',
                     }}
+                    onClick={collapseNavBar}
                   >
                     {item.svgIcon && item.svgIcon()}
                     {item.label}
@@ -189,7 +194,6 @@ const Menu = (props) => {
                     {item.items.map(({ href, label, target }) => {
                       return (
                         <MenuItem>
-                          {' '}
                           <a
                             className="navbar-item"
                             href={href}
@@ -198,6 +202,7 @@ const Menu = (props) => {
                               color: isDark ? 'aqua' : '#d2004c',
                               marginBottom: '20px',
                             }}
+                            onClick={collapseNavBar}
                           >
                             {label}{' '}
                           </a>
@@ -217,9 +222,9 @@ const Menu = (props) => {
                 }}
                 onClick={() => {
                   push(item.href)
+                  collapseNavBar()
                 }}
               >
-                {' '}
                 {item.svgIcon && item.svgIcon()}
                 {item.label}
               </MenuItem>

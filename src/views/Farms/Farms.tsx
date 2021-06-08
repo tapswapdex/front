@@ -494,8 +494,22 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           </FilterContainer>
         </ControlContainer>
         {renderContent()}
-        <Image src="/images/taps/8.png" alt="illustration" width={1352} height={587} responsive />
+        {/* <Image
+          src="https://cdn.discordapp.com/attachments/847731075640066048/851708900708712478/New.png"
+          alt="illustration"
+          width={1920}
+          height={1080}
+          responsive
+        /> */}
       </Page>
+      <img
+        src="https://cdn.discordapp.com/attachments/847731075640066048/851708900708712478/New.png"
+        alt=""
+        style={{
+          position: 'absolute',
+          width: '100vw',
+        }}
+      />
     </>
   )
 }
