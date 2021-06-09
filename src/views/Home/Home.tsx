@@ -12,6 +12,7 @@ import EarnAssetCard from 'views/Home/components/EarnAssetCard'
 import TwitterCard from 'views/Home/components/TwitterCard'
 import ListedOn from 'views/Home/components/ListedOn'
 import { CheckCircle } from 'react-feather'
+import useTheme from 'hooks/useTheme'
 import AuditCard from './components/AuditCard'
 
 const Hero = styled.div`
@@ -89,6 +90,7 @@ const Header = styled.div`
 `
 
 const Home: React.FC = () => {
+  const { isDark } = useTheme()
   const TranslateString = useI18n()
   const [width, setWidth] = useState<number>(window.innerWidth)
   function handleWindowSizeChange() {
@@ -197,7 +199,11 @@ const Home: React.FC = () => {
         </div>
       </Page>
       <img
-        src="https://cdn.discordapp.com/attachments/847731075640066048/851708900708712478/New.png"
+        src={
+          isDark
+            ? `https://cdn.discordapp.com/attachments/847731075640066048/852086584102617098/Space.png`
+            : `https://cdn.discordapp.com/attachments/847731075640066048/851737644463554580/Oasis.png`
+        }
         alt=""
         style={{
           position: 'absolute',
