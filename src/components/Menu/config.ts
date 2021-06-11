@@ -137,7 +137,7 @@ const config: AppMenuEntry[] = [
   //   href: '/ifo',
   // },
   {
-    label: 'Audit By Certik',
+    label: 'Certik Security Oracle',
     icon: 'ShieldIcon',
     href: 'https://www.certik.org/projects/tapswapfinance',
     target: '_blank',
