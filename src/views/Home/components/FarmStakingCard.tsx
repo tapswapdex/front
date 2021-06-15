@@ -12,9 +12,14 @@ import { BASE_URL } from '../../../config'
 import registerToken from '../../../utils/metamaskUtils'
 
 const StyledFarmStakingCard = styled(Card)`
+  background-image: ${({ theme }) =>
+    theme.isDark
+      ? "url('https://cdn.discordapp.com/attachments/847731075640066048/854277949204856852/TAPS-WBNB_Farm_320px.png')"
+      : "url('https://cdn.discordapp.com/attachments/847731075640066048/854277949204856852/TAPS-WBNB_Farm_320px.png')"};
+  background-size: px;
   background-repeat: no-repeat;
   background-position: top right;
-  min-height: 376px;
+  min-height: 370px;
 `
 
 const Block = styled.div`
