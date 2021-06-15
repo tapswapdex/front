@@ -1,3 +1,4 @@
+import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 
@@ -8,7 +9,7 @@ export default function SecurityIcon() {
     <svg
       viewBox="-60 -30 600 600"
       width="24px"
-      fill={isDark ? 'white' : 'blue'}
+      fill={isDark ? darkColors.text : lightColors.text}
       color="text"
       xmlns="http://www.w3.org/2000/svg"
       className="sc-bdnxRM oTxNM"

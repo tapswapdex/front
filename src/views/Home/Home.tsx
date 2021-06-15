@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Heading, BaseLayout, Button } from '@pancakeswap-libs/uikit'
+import { Heading, BaseLayout, Button, lightColors, darkColors } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 import Page from 'components/layout/Page'
@@ -13,6 +13,7 @@ import TwitterCard from 'views/Home/components/TwitterCard'
 import ListedOn from 'views/Home/components/ListedOn'
 import { CheckCircle } from 'react-feather'
 import useTheme from 'hooks/useTheme'
+import CertikSvg from 'assets/svg/certik'
 import AuditCard from './components/AuditCard'
 
 const Hero = styled.div`
@@ -105,6 +106,45 @@ const Home: React.FC = () => {
 
   const isMobile = width <= 768
 
+  const StickyCertification = (
+    <div
+      style={{
+        width: isMobile ? '40vw' : '8vw',
+        position: 'fixed',
+        zIndex: 99999999999,
+        bottom: '1%',
+        left: isMobile ? '4%' : '2%',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <h1> {CertikSvg()}</h1>
+        <h1
+          style={{
+            color: '#4acaa4',
+          }}
+        >
+          Certik
+        </h1>
+        <h1 style={{ color: isDark ? darkColors.warning : lightColors.warning }}>
+          <CheckCircle />
+        </h1>
+        <h1
+          style={{
+            color: '#4acaa4',
+          }}
+        >
+          Skynet
+        </h1>
+      </div>
+    </div>
+  )
+
   return (
     <>
       <Header>
@@ -156,47 +196,7 @@ const Home: React.FC = () => {
             <AuditCard />
           </Cards>
         </div>
-        <div
-          style={{
-            width: isMobile ? '40vw' : '8vw',
-            position: 'fixed',
-            zIndex: 99999999999,
-            bottom: '1%',
-            left: isMobile ? '4%' : '2%',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
-            <img
-              color="green"
-              src="https://d33wubrfki0l68.cloudfront.net/dfe9e8524c40923c3f0e2d34b1b939aa411e79f4/404e7/img/certik-logo-w-small.svg"
-              width="30px"
-              alt=""
-            />
-            <h1
-              style={{
-                color: '#4acaa4',
-              }}
-            >
-              Certik
-            </h1>
-            <h1 style={{ color: 'white' }}>
-              <CheckCircle />
-            </h1>
-            <h1
-              style={{
-                color: '#4acaa4',
-              }}
-            >
-              Skynet
-            </h1>
-          </div>
-        </div>
+        {StickyCertification}
       </Page>
       <img
         src={

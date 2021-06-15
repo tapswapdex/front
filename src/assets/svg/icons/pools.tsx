@@ -1,3 +1,4 @@
+import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 
@@ -11,7 +12,7 @@ export default function PoolsIcon() {
       color="text"
       xmlns="http://www.w3.org/2000/svg"
       className="sc-bdfBwQ jPzyzv"
-      fill={isDark ? 'white' : 'blue'}
+      fill={isDark ? darkColors.text : lightColors.text}
     >
       <path d="M7.5 13C7.5 11.8954 8.39543 11 9.5 11H12.5C13.6046 11 14.5 11.8954 14.5 13V15C14.5 16.1046 13.6046 17 12.5 17H9.5C8.39543 17 7.5 16.1046 7.5 15V13Z" />
       <path

@@ -1,3 +1,4 @@
+import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 
@@ -6,7 +7,7 @@ export default function SunSvg() {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill={isDark ? 'white' : 'dark'}
+      fill={isDark ? darkColors.text : lightColors.text}
       color="text"
       width="24px"
       xmlns="http://www.w3.org/2000/svg"

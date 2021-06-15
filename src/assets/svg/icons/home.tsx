@@ -1,3 +1,4 @@
+import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 
@@ -7,7 +8,7 @@ export default function HomeIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill={isDark ? 'white' : 'blue'}
+      fill={isDark ? darkColors.text : lightColors.text}
       width="24px"
       color="text"
       xmlns="http://www.w3.org/2000/svg"

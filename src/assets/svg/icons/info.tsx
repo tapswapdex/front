@@ -1,3 +1,4 @@
+import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 
@@ -6,7 +7,7 @@ export default function InfoIcon() {
 
   return (
     <svg
-      fill={isDark ? 'white' : 'blue'}
+      fill={isDark ? darkColors.text : lightColors.text}
       viewBox="0 0 24 24"
       width="24px"
       color="text"
