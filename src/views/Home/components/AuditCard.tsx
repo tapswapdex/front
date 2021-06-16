@@ -21,14 +21,12 @@ const AuditCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading size="lg">Security Oracle</Heading>
-        <CardMidContent>
-          <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
-            {/* <img src="/images/tapswap/shield.svg" height="24px" width="24px" alt="Certik" />  */}Certik Skynet
-          </LinkAudit>
-          {/* <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
-            Techrate
-          </LinkAudit> */}
-        </CardMidContent>
+        <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
+          {/* <img src="/images/tapswap/shield.svg" height="24px" width="24px" alt="Certik" />  */}Certik Skynet
+        </LinkAudit>
+        <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
+          Techrate
+        </LinkAudit>
       </CardBody>
     </StyledFarmStakingCard>
   )
