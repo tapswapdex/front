@@ -4,6 +4,7 @@ import { useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import { Text } from '@pancakeswap-libs/uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
+import useTheme from 'hooks/useTheme'
 
 export interface FarmProps {
   label: string
@@ -38,6 +39,7 @@ const Container = styled.div`
 `
 
 const Farm: React.FunctionComponent<FarmProps> = ({ image, label, pid }) => {
+  const { isDark } = useTheme()
   const { stakedBalance } = useFarmUser(pid)
   const TranslateString = useI18n()
   const rawStakedBalance = getBalanceNumber(stakedBalance)
@@ -45,8 +47,14 @@ const Farm: React.FunctionComponent<FarmProps> = ({ image, label, pid }) => {
   const handleRenderFarming = (): JSX.Element => {
     if (rawStakedBalance) {
       return (
-        <Text color="secondary" fontSize="12px" bold>
-          {TranslateString(999, 'FARMING')}
+        <Text
+          style={{
+            color: isDark ? '#26b497' : '#da3b76',
+          }}
+          fontSize="12px"
+          bold
+        >
+          {TranslateString(999, 'Farming is life')}
         </Text>
       )
     }
