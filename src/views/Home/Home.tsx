@@ -147,7 +147,11 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <Header>
+      <Header
+        style={{
+          backgroundImage: `url('https://cdn.discordapp.com/attachments/847731075640066048/854612657629429800/Tab.png')`,
+        }}
+      >
         <Heading
           as="h1"
           size="xl"
