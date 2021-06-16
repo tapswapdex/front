@@ -170,7 +170,13 @@ const Home: React.FC = () => {
         >
           <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
             <Button variant="primary">
-              {TranslateString(733, 'BUY')} <img src="/images/farms/taps.png" alt="TAPS Token" width="70" height="70" />{' '}
+              {TranslateString(733, 'BUY')}{' '}
+              <img
+                src="https://cdn.discordapp.com/attachments/847731075640066048/854598126110507018/taps.png"
+                alt="TAPS Token"
+                width="70"
+                height="70"
+              />{' '}
               {TranslateString(734, 'TAPS Token Now!')}
             </Button>
           </a>
