@@ -2,7 +2,16 @@
 
 body {
     font-family: Sans-serif;
-    background: #555;
+    background: url('https://cdn.discordapp.com/attachments/847731075640066048/854624011149639681/Galaxy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+  }
+
+  .fdgNqe{
+    background-color: rgba($color: #0f0e2f, $alpha: 0.5) !important;
+   border: 0.6px solid rgba($color: white, $alpha: 0.7);
   }
 
   .sc-fxFQKN{

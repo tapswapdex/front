@@ -14,6 +14,7 @@ import ListedOn from 'views/Home/components/ListedOn'
 import { CheckCircle } from 'react-feather'
 import useTheme from 'hooks/useTheme'
 import AuditCard from './components/AuditCard'
+import Partners from './components/Partners'
 
 const Hero = styled.div`
   align-items: center;
@@ -109,7 +110,8 @@ const Home: React.FC = () => {
     <>
       <Header
         style={{
-          backgroundImage: `url('https://cdn.discordapp.com/attachments/847731075640066048/854612657629429800/Tab.png')`,
+          background: 'none',
+          backgroundColor: 'transparent',
         }}
       >
         <Heading
@@ -165,6 +167,9 @@ const Home: React.FC = () => {
             <ListedOn />
             <AuditCard />
           </Cards>
+          <Cards>
+            <Partners />
+          </Cards>
         </div>
         <div
           style={{
@@ -208,7 +213,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </Page>
-      <img
+      {/* <img
         src={
           isDark
             ? `https://cdn.discordapp.com/attachments/847731075640066048/852086584102617098/Space.png`
@@ -219,7 +224,7 @@ const Home: React.FC = () => {
           position: 'absolute',
           width: '100vw',
         }}
-      />
+      /> */}
     </>
   )
 }
