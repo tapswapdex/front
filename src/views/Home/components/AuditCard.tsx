@@ -24,7 +24,7 @@ const AuditCard = () => {
         <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
           {/* <img src="/images/tapswap/shield.svg" height="24px" width="24px" alt="Certik" />  */}Certik Skynet
         </LinkAudit>
-        <LinkAudit href="https://www.certik.org/projects/tapswapfinance" target="__blank" rel="noreferrer noopener">
+        <LinkAudit href="/TapSwap_Audit.pdf" target="__blank" rel="noreferrer noopener">
           Techrate
         </LinkAudit>
       </CardBody>
