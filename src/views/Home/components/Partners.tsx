@@ -23,7 +23,7 @@ const Partners = () => {
   return (
     <StyledListedOn>
       <CardBody>
-        <Heading size="lg">Partnerships and Technology Use</Heading>
+        <Heading size="lg">Partnerships and Technology</Heading>
         <LinkListed>
           <a href="https://www.dapp.com/app/tapswap-exchange" target="_blank" rel="noreferrer">
             <Image
