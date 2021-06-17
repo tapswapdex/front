@@ -207,9 +207,7 @@ const Home: React.FC = () => {
             <ListedOn />
             <AuditCard />
           </Cards>
-          <Cards>
-            <Partners />
-          </Cards>
+          <Partners />
         </div>
         {StickyCertification}
       </Page>
