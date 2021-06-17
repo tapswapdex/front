@@ -37,11 +37,8 @@ const ShillCard = () => {
               padding: '50px',
             }}
           >
-            <Heading>For the month of June</Heading>
+            <Heading>Security Oracle</Heading>
             <img src="https://cdn.discordapp.com/attachments/847731075640066048/855010573824294932/Certik.png" alt="" />
-          </div>
-          <div>
-            <Heading>Buy TAPS</Heading>
           </div>
           <div
             style={{
@@ -50,6 +47,13 @@ const ShillCard = () => {
           >
             <Heading>Buy signal for $SHIB Token</Heading>
             <img src="https://miro.medium.com/max/800/0*kZnKmgzBxG9oDyVB.png" alt="" />
+          </div>
+          <div>
+            <Heading>Security Audit</Heading>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/855015754113351680/Techrate.png"
+              alt=""
+            />
           </div>
         </Carousel>
       </CardBody>
