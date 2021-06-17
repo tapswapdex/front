@@ -14,6 +14,8 @@ const StyledFarmStakingCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  background-color: rgba(15, 14, 47, 0.5) !important;
+  border: 0.6px solid rgba(255, 255, 255, 0.7);
 
   ${({ theme }) => theme.mediaQueries.lg} {
     margin: 0;
@@ -37,7 +39,6 @@ const EarnAPYCard: React.FC = () => {
 
   const getHighestAPY = () => {
     const activeFarms = farmsLP.filter((farm) => !farm.isTokenOnly && farm.pid !== 0 && farm.multiplier !== '0X')
-    console.log('Active farms', activeFarms)
 
     calculateAPY(activeFarms)
 
