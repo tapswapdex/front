@@ -8,6 +8,8 @@ const StyledListedOn = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
+  background-color: rgba(15, 14, 47, 0.5) !important;
+  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const LinkListed = styled.a`
@@ -21,7 +23,7 @@ const Partners = () => {
   return (
     <StyledListedOn>
       <CardBody>
-        <Heading size="lg">Partners</Heading>
+        <Heading size="lg">Partnerships and Technology Use</Heading>
         <LinkListed>
           <a href="https://www.dapp.com/app/tapswap-exchange" target="_blank" rel="noreferrer">
             <Image
@@ -48,6 +50,63 @@ const Partners = () => {
               alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
               width={150}
               height={43}
+            />
+          </a>
+        </LinkListed>
+
+        <LinkListed>
+          <a href="https://app.1inch.io/#/56/swap/TAPS/BUSD" target="_blank" rel="noreferrer">
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/854978566080692234/1inch.png"
+              alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
+              width={150}
+              height={45}
+            />
+          </a>
+        </LinkListed>
+
+        <LinkListed>
+          <a href="https://techrate.org/#about" target="_blank" rel="noreferrer">
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/854978595034497054/techrate.png"
+              alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
+              width={150}
+              height={45}
+            />
+          </a>
+        </LinkListed>
+        <LinkListed>
+          <a href="https://trustwallet.com/" target="_blank" rel="noreferrer">
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/854978630475579422/trustwallet.png"
+              alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
+              width={150}
+              height={105}
+            />
+          </a>
+        </LinkListed>
+        <LinkListed>
+          <a
+            href="https://dex.apeswap.finance/#/swap?outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/854978681428377630/binance_smartchain.png"
+              alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
+              width={150}
+              height={80}
+            />
+          </a>
+        </LinkListed>
+
+        <LinkListed>
+          <a href="https://www.certik.org/projects/tapswapfinance" target="_blank" rel="noreferrer">
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/854978820435214356/certik.png"
+              alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
+              width={150}
+              height={45}
             />
           </a>
         </LinkListed>

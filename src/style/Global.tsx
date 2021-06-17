@@ -19,7 +19,7 @@ const GlobalStyle = () => {
 
     background-color: ${({ theme }) => theme.colors.background};
     background-image: url(${
-      isDark && 'https://cdn.discordapp.com/attachments/847731075640066048/854624011149639681/Galaxy.png'
+      isDark && 'https://cdn.discordapp.com/attachments/847731075640066048/854998645790474250/Night.png'
     });
 
     img {

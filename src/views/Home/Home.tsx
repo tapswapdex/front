@@ -15,6 +15,8 @@ import { CheckCircle } from 'react-feather'
 import useTheme from 'hooks/useTheme'
 import AuditCard from './components/AuditCard'
 import Partners from './components/Partners'
+import FarmStepsCard from './components/FarmStepsCard'
+import ShillCard from './components/ShillCard'
 
 const Hero = styled.div`
   align-items: center;
@@ -150,13 +152,23 @@ const Home: React.FC = () => {
             <Button variant="primary">Trade</Button>
           </a>
         </Heading>
+        <Heading
+          size="lg"
+          color="text"
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+          }}
+        >
+          <FarmStepsCard />
+        </Heading>
       </Header>
       <Page>
         <div>
           <Cards>
             <FarmStakingCard />
+            <ShillCard />
             <TwitterCard />
-            <CakeStats />
             <TotalValueLockedCard />
           </Cards>
           <Cards>

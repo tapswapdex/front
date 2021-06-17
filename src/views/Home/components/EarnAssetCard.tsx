@@ -10,6 +10,8 @@ const StyledFarmStakingCard = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
+  background-color: rgba(15, 14, 47, 0.5) !important;
+  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   color: ${({ theme }) => (theme.isDark ? 'white' : '#41aa29')};

@@ -5,6 +5,8 @@ import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Link } from '@pancakes
 const StyledFarmStakingCard = styled(Card)`
   display: flex;
   flex: 1;
+  background-color: rgba(15, 14, 47, 0.5) !important;
+  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
   color: ${({ theme }) => (theme.isDark ? 'white' : '#4bca4b')};
@@ -20,7 +22,7 @@ const AuditCard = () => {
   return (
     <StyledFarmStakingCard>
       <CardBody>
-        <Heading size="lg">Security Audity</Heading>
+        <Heading size="lg">Security Audit</Heading>
         <LinkAudit href="/TapSwap_Audit.pdf" target="__blank" rel="noreferrer noopener">
           Techrate
         </LinkAudit>
