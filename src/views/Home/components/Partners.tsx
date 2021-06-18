@@ -68,7 +68,7 @@ const Partners = () => {
         <LinkListed>
           <a href="https://techrate.org/#about" target="_blank" rel="noreferrer">
             <Image
-              src="https://cdn.discordapp.com/attachments/847731075640066048/854978595034497054/techrate.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/855337578924736562/techrate.png"
               alt="Cheaper and faster than Uniswap? Discover ApeSwap, the #1 AMM and yield farm for apes by apes."
               width={150}
               height={45}
