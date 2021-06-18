@@ -9,14 +9,13 @@ import { getCakeAddress } from 'utils/addressHelpers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import ReactTooltip from 'react-tooltip'
+import useTheme from 'hooks/useTheme'
 import CardValue from './CardValue'
 import { useFarms, usePriceCakeBusd } from '../../../state/hooks'
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const Row = styled.div`
@@ -36,6 +35,7 @@ const RowHighlighted = styled(Row)`
 `
 
 const CakeStats = () => {
+  const { isDark } = useTheme()
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
@@ -51,7 +51,13 @@ const CakeStats = () => {
   }
 
   return (
-    <StyledCakeStats>
+    <StyledCakeStats
+      style={{
+        backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+        border: '0.6px solid rgba(255, 255, 255, 0.7)',
+        boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+      }}
+    >
       <CardBody>
         <Heading size="lg" mb="24px">
           {TranslateString(534, 'Taps Stats')}

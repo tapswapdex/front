@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { Heading, Card, CardBody, Button, MetamaskIcon, LinkExternal } from '@pancakeswap-libs/uikit'
 import { useWeb3React } from '@web3-react/core'
 import useI18n from 'hooks/useI18n'
@@ -20,8 +20,6 @@ const StyledFarmStakingCard = styled(Card)`
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 370px;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const Block = styled.div`
@@ -46,6 +44,7 @@ const TertiaryButton = styled(Button)`
 `
 
 const FarmedStakingCard = () => {
+  const { isDark } = useTheme()
   const [pendingTx, setPendingTx] = useState(false)
   const { account } = useWeb3React()
   const TranslateString = useI18n()
@@ -70,7 +69,13 @@ const FarmedStakingCard = () => {
   const tokenAddress = `0x56eab07247e3e6404ac90140F20bba61375d5C3C`
 
   return (
-    <StyledFarmStakingCard>
+    <StyledFarmStakingCard
+      style={{
+        backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+        border: '0.6px solid rgba(255, 255, 255, 0.7)',
+        boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+      }}
+    >
       <CardBody>
         <Heading size="lg" mb="24px">
           {TranslateString(542, 'Farms & Staking')}

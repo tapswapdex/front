@@ -2,13 +2,12 @@ import React from 'react'
 import { Card, CardBody, Heading, Image, Text } from '@pancakeswap-libs/uikit'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
+import useTheme from 'hooks/useTheme'
 
 const StyledListedOn = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const LinkListed = styled.a`
@@ -18,8 +17,15 @@ const LinkListed = styled.a`
 `
 
 const ListedOn = () => {
+  const { isDark } = useTheme()
   return (
-    <StyledListedOn>
+    <StyledListedOn
+      style={{
+        backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+        border: '0.6px solid rgba(255, 255, 255, 0.7)',
+        boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+      }}
+    >
       <CardBody>
         <Heading size="lg">Listed on</Heading>
         <LinkListed>
