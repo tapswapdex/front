@@ -40,13 +40,49 @@ const ShillCard = () => {
             <Heading>Security Oracle</Heading>
             <img src="https://cdn.discordapp.com/attachments/847731075640066048/855010573824294932/Certik.png" alt="" />
           </div>
-          <div
-            style={{
-              padding: '50px',
-            }}
-          >
+          <div>
+            <Heading>JDI Yield</Heading>
+            <img
+              src="   https://cdn.discordapp.com/attachments/847731075640066048/855337874362728488/Farm_JDi.png"
+              alt=""
+            />
+          </div>
+
+          <div>
             <Heading>Buy signal for $SHIB Token</Heading>
-            <img src="https://miro.medium.com/max/800/0*kZnKmgzBxG9oDyVB.png" alt="" />
+            <img
+              src="/images/farms/shib.png"
+              alt=""
+              style={{
+                maxHeight: '300px',
+                maxWidth: '300px',
+              }}
+            />
+            <Heading>Catalyst: Coinbase listing</Heading>
+          </div>
+          <div>
+            <Heading>Buy signal for $MATIC Token</Heading>
+            <img
+              src="/images/farms/matic.png"
+              alt=""
+              style={{
+                maxHeight: '300px',
+                maxWidth: '300px',
+              }}
+            />
+            <Heading>Catalyst: Growing polygon ecosystem</Heading>
+          </div>
+          <div>
+            <Heading>Buy signal for $BANANA Token</Heading>
+            <img
+              src="/images/farms/banana.png"
+              alt=""
+              style={{
+                maxHeight: '300px',
+                maxWidth: '300px',
+              }}
+            />
+            <Heading>Catalyst: Expanding to Polygon Network</Heading>
           </div>
           <div>
             <Heading>Security Audit</Heading>

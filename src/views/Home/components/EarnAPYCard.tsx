@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import { useFarms, usePriceBnbBusd, usePriceCakeBusd } from 'state/hooks'
+import FarmsIcon from 'assets/svg/icons/farms'
 import { FarmWithStakedValue } from '../../Farms/components/FarmCard/FarmCard'
 import { BLOCKS_PER_YEAR } from '../../../config'
 import { QuoteToken } from '../../../config/constants/types'
@@ -22,10 +23,7 @@ const StyledFarmStakingCard = styled(Card)`
     max-width: none;
   }
 `
-const CardMidContent = styled(Heading).attrs({ size: 'xl' })`
-  color: ${({ theme }) => (theme.isDark ? 'white' : '#41aa29')};
-  line-height: 44px;
-`
+
 const EarnAPYCard: React.FC = () => {
   const TranslateString = useI18n()
   const farmsLP = useFarms()
@@ -92,19 +90,24 @@ const EarnAPYCard: React.FC = () => {
       <NavLink exact activeClassName="active" to="/farms" id="farm-apy-cta">
         <CardBody>
           <Heading size="lg">Earn up to</Heading>
-          <CardMidContent>
+          <Heading size="md">
             {getHighestAPY() ? (
               `${getHighestAPY()}% ${TranslateString(736, 'APR')}`
             ) : (
               <Skeleton animation="pulse" variant="rect" height="44px" />
             )}
-          </CardMidContent>
+          </Heading>
           <Flex justifyContent="space-between">
-            <Heading size="lg">
-              in <img src="/images/tapswap/farms.svg" height="24px" width="24px" alt="Farms" /> Farms
-            </Heading>
-            <ArrowForwardIcon mt={30} color="primary" />
+            <Heading size="md">in Farms</Heading>
           </Flex>
+          <div
+            style={{
+              position: 'absolute',
+              right: 20,
+            }}
+          >
+            <FarmsIcon />
+          </div>
         </CardBody>
       </NavLink>
     </StyledFarmStakingCard>

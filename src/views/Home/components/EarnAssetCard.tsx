@@ -5,6 +5,7 @@ import { Heading, Card, CardBody, Flex, ArrowForwardIcon } from '@pancakeswap-li
 import { NavLink } from 'react-router-dom'
 import pools from 'config/constants/pools'
 import { Pool } from 'state/types'
+import FaucetIcon from 'assets/svg/icons/faucet'
 
 const StyledFarmStakingCard = styled(Card)`
   align-items: center;
@@ -27,14 +28,19 @@ const EarnAssetCard = () => {
     <StyledFarmStakingCard>
       <NavLink exact activeClassName="active" to="/bush">
         <CardBody>
-          <Heading size="lg">Earn</Heading>
-          <CardMidContent>{assets}</CardMidContent>
+          <Heading size="md">Earn {assets}</Heading>
+
           <Flex justifyContent="space-between">
-            <Heading size="lg">
-              in <img src="/images/tapswap/bush.svg" height="24px" width="24px" alt="Smart Faucets" /> Smart Faucets
-            </Heading>
-            <ArrowForwardIcon mt={30} color="primary" />
+            <Heading size="md">in Smart Faucets</Heading>
           </Flex>
+          <div
+            style={{
+              position: 'absolute',
+              right: 20,
+            }}
+          >
+            <FaucetIcon />
+          </div>
         </CardBody>
       </NavLink>
     </StyledFarmStakingCard>
