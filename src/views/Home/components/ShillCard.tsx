@@ -4,20 +4,26 @@ import { Card, CardBody, Heading } from '@pancakeswap-libs/uikit'
 import styled from 'styled-components'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import useTheme from 'hooks/useTheme'
 
 const StyledCakeStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const ShillCard = () => {
+  const { isDark } = useTheme()
   return (
-    <StyledCakeStats>
+    <StyledCakeStats
+      style={{
+        backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+        border: '0.6px solid rgba(255, 255, 255, 0.7)',
+        boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+      }}
+    >
       <CardBody>
         <Heading size="lg" mb="24px">
-          Welcome to #HotDefiSummer
+          Shill Board
         </Heading>
         <Carousel infiniteLoop autoPlay showArrows showThumbs={false}>
           <div

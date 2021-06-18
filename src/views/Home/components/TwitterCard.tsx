@@ -7,14 +7,13 @@ import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
+import useTheme from 'hooks/useTheme'
 import CardValue from './CardValue'
 import { useFarms } from '../../../state/hooks'
 
 const StyledTwitterCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
 `
 
 const Row = styled.div`
@@ -26,10 +25,17 @@ const Row = styled.div`
 `
 
 const TwitterCard = () => {
+  const { isDark } = useTheme()
   const TranslateString = useI18n()
 
   return (
-    <StyledTwitterCard>
+    <StyledTwitterCard
+      style={{
+        backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+        border: '0.6px solid rgba(255, 255, 255, 0.7)',
+        boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+      }}
+    >
       <CardBody>
         <Heading size="lg" mb="24px">
           {TranslateString(10003, 'Announcements')}

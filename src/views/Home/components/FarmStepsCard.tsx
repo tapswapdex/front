@@ -14,8 +14,6 @@ const StyledListedOn = styled(Card)`
 const StepCard = styled(Card)`
   padding: 10px;
   border-radius: 10px;
-  background-color: rgba(15, 14, 47, 0.5) !important;
-  border: 0.6px solid rgba(255, 255, 255, 0.7);
   width: 250px;
 
   @media (max-width: 768px) {
@@ -37,7 +35,7 @@ const LinkListed = styled.a`
 `
 
 const FarmStepsCard = () => {
-  const { theme } = useTheme()
+  const { theme, isDark } = useTheme()
 
   const farmingSteps = [
     {
@@ -96,7 +94,9 @@ const FarmStepsCard = () => {
               <>
                 <StepCard
                   style={{
-                    backgroundColor: 'transparent',
+                    backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+                    border: '0.6px solid rgba(255, 255, 255, 0.7)',
+                    boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
                   }}
                 >
                   <Text>{text}</Text>

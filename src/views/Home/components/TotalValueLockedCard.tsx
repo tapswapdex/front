@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BaseLayout, Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+import useTheme from 'hooks/useTheme'
 import { useTotalValue } from '../../../state/hooks'
 import CardValue from './CardValue'
 import EarnAssetCard from './EarnAssetCard'
@@ -40,12 +41,19 @@ const Cards = styled(BaseLayout)`
 `
 
 const TotalValueLockedCard = () => {
+  const { isDark } = useTheme()
   const TranslateString = useI18n()
   const totalValue = useTotalValue()
 
   return (
     <StyledTotalValueLockedCard>
-      <CardBody>
+      <CardBody
+        style={{
+          backgroundColor: isDark ? 'rgba(15, 14, 47, 0.5)' : 'white',
+          border: '0.6px solid rgba(255, 255, 255, 0.7)',
+          boxShadow: !isDark && '0px 0px 22px rgba(0,0,0,0.2)',
+        }}
+      >
         <Cards>
           <StyledTotalValueLockedCard>
             <CardBody>
