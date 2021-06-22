@@ -117,7 +117,15 @@ const FarmStepsCard = () => {
                       }}
                     >
                       {links.map(({ text: linkText, href }) => (
-                        <Link href={href}>{linkText}</Link>
+                        <Link
+                          href={href}
+                          style={{
+                            color: theme.colors.success,
+                            fontSize: 18,
+                          }}
+                        >
+                          {linkText}
+                        </Link>
                       ))}
                     </div>
                   )}

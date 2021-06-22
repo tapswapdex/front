@@ -26,23 +26,15 @@ const ShillCard = () => {
           Shill Board
         </Heading>
         <Carousel infiniteLoop autoPlay showArrows showThumbs={false}>
-          <div
-            style={{
-              padding: '50px',
-            }}
-          >
+          <div>
             <Heading>For the month of June</Heading>
             <img
-              src="https://cdn.discordapp.com/attachments/847731075640066048/855005976902238228/Taps__Moon_updated.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856430420089765988/Taps_Moon.png"
               alt=""
             />
           </div>
 
-          <div
-            style={{
-              padding: '50px',
-            }}
-          >
+          <div>
             <Heading>Security Oracle</Heading>
             <img src="https://cdn.discordapp.com/attachments/847731075640066048/855010573824294932/Certik.png" alt="" />
           </div>
@@ -55,45 +47,39 @@ const ShillCard = () => {
           </div>
 
           <div>
-            <Heading>Buy signal for $SHIB Token</Heading>
             <img
-              src="/images/farms/shib.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856454209343979530/Buy_Shiba.png"
               alt=""
-              style={{
-                maxHeight: '300px',
-                maxWidth: '300px',
-              }}
             />
-            <Heading>Catalyst: Coinbase listing</Heading>
           </div>
           <div>
-            <Heading>Buy signal for $MATIC Token</Heading>
             <img
-              src="/images/farms/matic.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856768555822743572/Buy_Matic.png"
               alt=""
-              style={{
-                maxHeight: '300px',
-                maxWidth: '300px',
-              }}
             />
-            <Heading>Catalyst: Growing polygon ecosystem</Heading>
           </div>
           <div>
-            <Heading>Buy signal for $BANANA Token</Heading>
             <img
-              src="/images/farms/banana.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856769095578681344/Buy_Banana.png"
               alt=""
-              style={{
-                maxHeight: '300px',
-                maxWidth: '300px',
-              }}
             />
-            <Heading>Catalyst: Expanding to Polygon Network</Heading>
           </div>
           <div>
-            <Heading>Security Audit</Heading>
             <img
               src="https://cdn.discordapp.com/attachments/847731075640066048/855015754113351680/Techrate.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856430280466497566/ApeSwap_x_PancakeSwap.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <Heading>$TAPS is now on TrustWallet</Heading>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/856771033134792774/Trust_Wallet.png"
               alt=""
             />
           </div>
