@@ -1,5 +1,4 @@
-
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from 'tapswap-uikit'
 import DocumentIcon from 'assets/svg/icons/document'
 import ExchangeIcon from 'assets/svg/icons/exchange'
 import FarmsIcon from 'assets/svg/icons/farms'
@@ -19,12 +18,12 @@ const config: AppMenuEntry[] = [
     label: 'Home',
     icon: 'HomeIcon',
     href: '/',
-    svgIcon: HomeIcon
+    svgIcon: HomeIcon,
   },
   {
     label: 'Trade',
     icon: 'TradeIcon',
-    href:"https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C",
+    href: 'https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
     // items: [
     //   {
     //     label: 'Exchange',
@@ -37,26 +36,25 @@ const config: AppMenuEntry[] = [
     //       'https://swape.tapswap.money/#/add/0xe9e7cea3dedca5984780bafc599bd69add087d56/0x56eab07247e3e6404ac90140F20bba61375d5C3C',
     //   },
     // ],
-    svgIcon: ExchangeIcon
+    svgIcon: ExchangeIcon,
   },
   {
     label: 'Lake Farms',
     icon: 'FarmIcon',
     href: '/farms',
-    svgIcon: FarmsIcon
-   
+    svgIcon: FarmsIcon,
   },
   {
     label: 'Oasis Pool',
     icon: 'PoolIcon',
     href: '/pools',
-    svgIcon: PoolsIcon
+    svgIcon: PoolsIcon,
   },
   {
     label: 'Smart Faucet',
     icon: 'BushIcon',
     href: '/bush',
-    svgIcon: FaucetIcon
+    svgIcon: FaucetIcon,
   },
   // {
   //   label: 'Techrate Audit',
@@ -84,7 +82,7 @@ const config: AppMenuEntry[] = [
     icon: 'InfoIcon',
     href: 'https://info.apeswap.finance/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c',
     target: '_blank',
-    svgIcon: InfoIcon
+    svgIcon: InfoIcon,
     // items: [
     //   {
     //     label: 'Token',
@@ -141,14 +139,14 @@ const config: AppMenuEntry[] = [
     icon: 'ShieldIcon',
     href: 'https://www.certik.org/projects/tapswapfinance',
     target: '_blank',
-    svgIcon: SecurityIcon
+    svgIcon: SecurityIcon,
   },
   {
     label: 'Docs',
     icon: 'DocIcon',
     href: 'https://tapswapmoney.gitbook.io/tapswap-dex/security/contract',
     target: '_blank',
-    svgIcon: DocumentIcon
+    svgIcon: DocumentIcon,
   },
   {
     label: 'More',
@@ -179,7 +177,7 @@ const config: AppMenuEntry[] = [
         target: '_blank',
       },
     ],
-    svgIcon: MoreIcon 
+    svgIcon: MoreIcon,
   },
 ]
 

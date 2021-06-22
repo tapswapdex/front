@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Heading, BaseLayout, Button } from '@pancakeswap-libs/uikit'
+import { Heading, BaseLayout, Button, lightColors, darkColors } from 'tapswap-uikit'
 import useI18n from 'hooks/useI18n'
 
 import Page from 'components/layout/Page'
@@ -148,7 +148,7 @@ const Home: React.FC = () => {
               {TranslateString(734, 'TAPS Token Now!')}
             </Button>
           </a>
-          <a href="https://swape.tapswap.finance/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
+          <a href="https://swape.tapswap.money/#/swap?inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56&outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C">
             <Button variant="primary">Trade</Button>
           </a>
         </Heading>

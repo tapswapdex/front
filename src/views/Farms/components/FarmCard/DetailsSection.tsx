@@ -2,7 +2,7 @@ import React from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
-import { Text, Flex, Link, LinkExternal } from '@pancakeswap-libs/uikit'
+import { Text, Flex, Link, LinkExternal } from 'tapswap-uikit'
 import Balance from '../../../../components/Balance'
 import { getBalanceNumber } from '../../../../utils/formatBalance'
 

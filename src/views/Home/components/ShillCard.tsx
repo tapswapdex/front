@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading } from 'tapswap-uikit'
 
 import styled from 'styled-components'
 import { Carousel } from 'react-responsive-carousel'

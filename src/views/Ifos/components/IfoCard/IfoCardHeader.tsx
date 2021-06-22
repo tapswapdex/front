@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Flex } from '@pancakeswap-libs/uikit'
+import { Heading, Text, Flex } from 'tapswap-uikit'
 
 interface IfoCardHeaderProps {
   ifoId: string

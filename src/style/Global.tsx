@@ -1,7 +1,7 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line import/no-unresolved
-import { PancakeTheme } from '@pancakeswap-libs/uikit/dist/theme'
+import { PancakeTheme } from 'tapswap-uikit/dist/theme'
 import useTheme from 'hooks/useTheme'
 
 declare module 'styled-components' {

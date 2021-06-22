@@ -8,7 +8,7 @@ import Balance from 'components/Balance'
 import { CommunityTag, CoreTag, BinanceTag } from 'components/Tags'
 import { PoolCategory } from 'config/constants/types'
 import registerToken from 'utils/metamaskUtils'
-import { Flex, MetamaskIcon, Text } from '@pancakeswap-libs/uikit'
+import { Flex, MetamaskIcon, Text } from 'tapswap-uikit'
 import { BASE_URL } from 'config'
 
 const tags = {

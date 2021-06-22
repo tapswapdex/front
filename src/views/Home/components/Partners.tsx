@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Image, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading, Image, Text } from 'tapswap-uikit'
 import styled, { ThemeConsumer } from 'styled-components'
 import useI18n from 'hooks/useI18n'
 import useTheme from 'hooks/useTheme'

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js/bignumber'
-import { Text, Button, Input, InputProps, Flex, Link } from '@pancakeswap-libs/uikit'
+import { Text, Button, Input, InputProps, Flex, Link } from 'tapswap-uikit'
 import useI18n from '../../hooks/useI18n'
 
 interface ModalInputProps {
