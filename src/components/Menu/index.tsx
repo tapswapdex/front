@@ -1,13 +1,5 @@
 import React, { Component, Props, useContext, useEffect, useState } from 'react'
-import {
-  Button,
-  ConnectorNames,
-  Dropdown,
-  Heading,
-  Menu as UikitMenu,
-  Toggle,
-  useWalletModal,
-} from '@pancakeswap-libs/uikit'
+import { Button, ConnectorNames, Dropdown, Heading, Menu as UikitMenu, Toggle, useWalletModal } from 'tapswap-uikit'
 import { ProSidebar, Menu as ProMenu, MenuItem, SubMenu, SidebarHeader } from 'react-pro-sidebar'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'config/localisation/languageCodes'

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js/bignumber'
-import { Box, Button, Flex, Text, Input, InputProps } from '@pancakeswap-libs/uikit'
+import { Box, Button, Flex, Text, Input, InputProps } from 'tapswap-uikit'
 import useI18n from 'hooks/useI18n'
 
 interface TokenInputProps extends InputProps {

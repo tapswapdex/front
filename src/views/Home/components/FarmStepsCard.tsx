@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Image, Link, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading, Image, Link, Text } from 'tapswap-uikit'
 import styled from 'styled-components'
 import useTheme from 'hooks/useTheme'
 import CardHeading from 'views/Farms/components/FarmCard/CardHeading'

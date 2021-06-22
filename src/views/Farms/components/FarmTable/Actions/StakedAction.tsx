@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import styled from 'styled-components'
-import { Button, useModal, IconButton, AddIcon, MinusIcon } from '@pancakeswap-libs/uikit'
+import { Button, useModal, IconButton, AddIcon, MinusIcon } from 'tapswap-uikit'
 import UnlockButton from 'components/UnlockButton'
 import { useWeb3React } from '@web3-react/core'
 import { useFarmFromPid, useFarmUser, usePriceBnbBusd, usePriceCakeBusd, usePriceEthBusd } from 'state/hooks'

@@ -1,4 +1,4 @@
-import { darkColors, lightColors } from '@pancakeswap-libs/uikit'
+import { darkColors, lightColors } from 'tapswap-uikit'
 import useTheme from 'hooks/useTheme'
 import React from 'react'
 

@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import { kebabCase } from 'lodash'
 import { useWeb3React } from '@web3-react/core'
-import { Toast, toastTypes } from '@pancakeswap-libs/uikit'
+import { Toast, toastTypes } from 'tapswap-uikit'
 import { useSelector, useDispatch } from 'react-redux'
 import { Team } from 'config/constants/types'
 import useRefresh from 'hooks/useRefresh'
@@ -115,7 +115,7 @@ export const usePriceEthBusd = (): BigNumber => {
 export const usePriceEthBnb = (): BigNumber => {
   const priceBnbBusd = usePriceBnbBusd()
   const priceEthBusd = usePriceEthBusd()
-  return priceEthBusd.div(priceBnbBusd) 
+  return priceEthBusd.div(priceBnbBusd)
 }
 
 // Toasts

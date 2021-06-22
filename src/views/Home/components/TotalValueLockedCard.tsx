@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BaseLayout, Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
+import { BaseLayout, Card, CardBody, Heading, Text } from 'tapswap-uikit'
 import useI18n from 'hooks/useI18n'
 import useTheme from 'hooks/useTheme'
 import { useTotalValue } from '../../../state/hooks'

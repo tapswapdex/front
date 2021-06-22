@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HelpIcon, Skeleton, Text } from '@pancakeswap-libs/uikit'
+import { HelpIcon, Skeleton, Text } from 'tapswap-uikit'
 import ApyButton from '../FarmCard/ApyButton'
 
 export interface FeeProps {
