@@ -889,23 +889,24 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  // {
-  //   pid: 65,
-  //   isApe: true,
-  //   isTokenOnly: true,
-  //   lpSymbol: 'LTC',
-  //   lpAddresses: {
-  //     97: '',
-  //     56: '0x0f12362c017fe5101c7bba09390f1cb729f5b318', // LTC-BNB
-  //   },
-  //   tokenSymbol: 'LTC',
-  //   tokenAddresses: {
-  //     97: '',
-  //     56: '0x4338665cbb7b2485a8855a139b75d5e34ab0db94', // LTC
-  //   },
-  //   quoteTokenSymbol: QuoteToken.BNB,
-  //   quoteTokenAdresses: contracts.wbnb,
-  // },
+  {
+    pid: 65,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'LTC',
+    lpAddresses: {
+      97: '',
+      56: '0x0f12362c017fe5101c7bba09390f1cb729f5b318', // LTC-BNB
+    },
+    tokenSymbol: 'LTC',
+    tokenAddresses: {
+      97: '',
+      56: '0x4338665cbb7b2485a8855a139b75d5e34ab0db94', // LTC
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  
 ]
 
 export default farms
