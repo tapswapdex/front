@@ -82,6 +82,20 @@ const ListedOn = () => {
             />
           </a>
         </LinkListed>
+        <LinkListed>
+          <a
+            href="https://bscscan.com/token/0x56eab07247e3e6404ac90140f20bba61375d5c3c"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="https://cdn.discordapp.com/attachments/847731075640066048/858973206961848320/bscscan.png"
+              alt="All Projects building on Binance Smart Chain (BSC)"
+              width={150}
+              height={35}
+            />
+          </a>
+        </LinkListed>
       </CardBody>
     </StyledListedOn>
   )
