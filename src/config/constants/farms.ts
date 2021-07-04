@@ -718,40 +718,40 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
 
-  {
-    pid: 54,
-    isApe: true,
-    isTokenOnly: false,
-    lpSymbol: 'PANTHER-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0x4ede3a65fceddfe4e8ea4279b684a94739fac35d', // PANTHER-BNB
-    },
-    tokenSymbol: 'PANTHER',
-    tokenAddresses: {
-      97: '',
-      56: '0x1f546ad641b56b86fd9dceac473d1c7a357276b7',
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 55,
-    isApe: true,
-    isTokenOnly: true,
-    lpSymbol: 'PANTHER',
-    lpAddresses: {
-      97: '',
-      56: '0x4ede3a65fceddfe4e8ea4279b684a94739fac35d', // PANTHER-BNB
-    },
-    tokenSymbol: 'PANTHER',
-    tokenAddresses: {
-      97: '',
-      56: '0x1f546ad641b56b86fd9dceac473d1c7a357276b7', // PANTHER
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
+  // {
+  //   pid: 54,
+  //   isApe: true,
+  //   isTokenOnly: false,
+  //   lpSymbol: 'PANTHER-BNB LP',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x4ede3a65fceddfe4e8ea4279b684a94739fac35d', // PANTHER-BNB
+  //   },
+  //   tokenSymbol: 'PANTHER',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x1f546ad641b56b86fd9dceac473d1c7a357276b7',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
+  // {
+  //   pid: 55,
+  //   isApe: true,
+  //   isTokenOnly: true,
+  //   lpSymbol: 'PANTHER',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x4ede3a65fceddfe4e8ea4279b684a94739fac35d', // PANTHER-BNB
+  //   },
+  //   tokenSymbol: 'PANTHER',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x1f546ad641b56b86fd9dceac473d1c7a357276b7', // PANTHER
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
   {
     pid: 56,
     isApe: true,
@@ -906,7 +906,6 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  
 ]
 
 export default farms
