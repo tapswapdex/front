@@ -83,6 +83,18 @@ const ShillCard = () => {
               alt=""
             />
           </div>
+          <div>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/861533876870840336/Buy_Axie_Infinity.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/861537440040484873/Buy_My_Defi_Pet.png"
+              alt=""
+            />
+          </div>
         </Carousel>
       </CardBody>
     </StyledCakeStats>
