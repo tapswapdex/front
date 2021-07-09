@@ -91,7 +91,19 @@ const ShillCard = () => {
           </div>
           <div>
             <img
-              src="https://cdn.discordapp.com/attachments/847731075640066048/861537440040484873/Buy_My_Defi_Pet.png"
+              src="https://cdn.discordapp.com/attachments/847731075640066048/862938886308626432/Buy_My_Defi_Pet_Call_Price.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/862934000405446667/Buy_Smooth_Love_Potion_Call_Price.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://cdn.discordapp.com/attachments/847731075640066048/862934001915658270/Buy_Axie_Infinity_Day_Price.png"
               alt=""
             />
           </div>
