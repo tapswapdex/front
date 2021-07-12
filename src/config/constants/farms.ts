@@ -906,6 +906,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
+  {
+    pid: 67,
+    isApe: true,
+    isTokenOnly: true,
+    lpSymbol: 'DPET',
+    lpAddresses: {
+      97: '',
+      56: '0x55f1fd764acc9bcd1785902f4fea998f0175df89', // DPET-BNB
+    },
+    tokenSymbol: 'DPET',
+    tokenAddresses: {
+      97: '',
+      56: '0xfb62AE373acA027177D1c18Ee0862817f9080d08', // DPET
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
 ]
 
 export default farms
