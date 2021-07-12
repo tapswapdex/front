@@ -176,6 +176,10 @@ const config: AppMenuEntry[] = [
         href: 'https://t.me/tapswapdex',
         target: '_blank',
       },
+      {
+        label: 'Launchpad',
+        href: '/#/launchpad',
+      },
     ],
     svgIcon: MoreIcon,
   },

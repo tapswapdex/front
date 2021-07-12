@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { ResetCSS } from 'tapswap-uikit'
 import BigNumber from 'bignumber.js'
@@ -21,6 +21,7 @@ const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
 const NotFound = lazy(() => import('./views/NotFound'))
 const Bush = lazy(() => import('./views/Bush'))
+const Launchpad = lazy(() => import('./views/Launchpad'))
 
 // This config is required for number formating
 BigNumber.config({
@@ -42,6 +43,9 @@ const App: React.FC = () => {
       <Suspense fallback={<PageLoader />}>
         <Menu />
         <Switch>
+          <Route path="/launchpad">
+            <Launchpad />
+          </Route>
           <Route path="/" exact>
             <Home />
           </Route>
