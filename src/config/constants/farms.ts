@@ -922,7 +922,23 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-  },
+  }, // {
+  //   pid: 68,
+  //   isApe: true,
+  //   isTokenOnly: false,
+  //   lpSymbol: 'DPET-BNB LP',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x55F1fD764aCc9BcD1785902F4FeA998F0175dF89',// DPET-BNB
+  //   },
+  //   tokenSymbol: 'DPET',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0xfb62AE373acA027177D1c18Ee0862817f9080d08',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
 ]
 
 export default farms
