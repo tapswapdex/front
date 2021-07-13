@@ -3,11 +3,9 @@ import apeABI from 'config/abi/ape.json'
 import { getWeb3NoAccount } from 'utils/web3'
 import { AbiItem } from 'web3-utils'
 import BigNumber from 'bignumber.js'
-import { usePriceBnbBusd } from '../state/hooks'
 
 const useCakePrice = async () => {
   const [price, setCakePrice] = useState([])
-  const bnbPriceUSD = usePriceBnbBusd()
   const web3 = getWeb3NoAccount()
   const bnToDec = (bn, decimals = 18) => {
     return bn.dividedBy(new BigNumber(10).pow(decimals)).toNumber()
@@ -21,10 +19,10 @@ const useCakePrice = async () => {
   useEffect(() => {
     async function getPrice() {
       const cakeBNBPairContractAddress = '0xA527a61703D82139F8a06Bc30097cC9CAA2df5A6'
-      const IcakeBNBPairContract = new web3.eth.Contract((apeABI as unknown) as AbiItem, cakeBNBPairContractAddress)
+      const IcakeBNBPairContract = new web3.eth.Contract(apeABI as unknown as AbiItem, cakeBNBPairContractAddress)
       const cakeBNBPairContract = {
         address: cakeBNBPairContractAddress,
-        abi: (apeABI as unknown) as AbiItem,
+        abi: apeABI as unknown as AbiItem,
         contract: IcakeBNBPairContract,
         decimals: 18,
       }

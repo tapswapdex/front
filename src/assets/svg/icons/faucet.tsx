@@ -8,7 +8,7 @@ export default function FaucetIcon() {
   return (
     <svg
       viewBox="0 0 512 512"
-      fill={isDark ? 'white' : 'dark'}
+      fill={isDark ? 'white' : 'blue'}
       width="24px"
       color="text"
       xmlns="http://www.w3.org/2000/svg"
