@@ -93,8 +93,8 @@ const Launchpad: React.FC = () => {
           <div className="details">
             <div className="detail-item">Referral Commission (5%)</div>
             <div className="detail-item">Buy Back (20%)</div>
-            <div className="detail-item">Faucet Operation (30%)</div>
-            <div className="detail-item">Auto Compounding (40%)</div>
+            <div className="detail-item">Faucet (30%)</div>
+            <div className="detail-item">Platform Operator (40%)</div>
           </div>
         </LaunchPadItem>
         <LaunchPadItem>
@@ -109,8 +109,8 @@ const Launchpad: React.FC = () => {
           <div className="details">
             <div className="detail-item">Referral Commission (5%)</div>
             <div className="detail-item">Buy Back (20%)</div>
-            <div className="detail-item">Faucet Operation (30%)</div>
-            <div className="detail-item">Auto Compounding (40%)</div>
+            <div className="detail-item">Faucet (30%)</div>
+            <div className="detail-item">Platform Operator (40%)</div>
           </div>
         </LaunchPadItem>
         <LaunchPadItem>
@@ -124,8 +124,8 @@ const Launchpad: React.FC = () => {
           <div className="details">
             <div className="detail-item">Referral Commission (5%)</div>
             <div className="detail-item">Buy Back (20%)</div>
-            <div className="detail-item">Faucet Operation (30%)</div>
-            <div className="detail-item">Auto Compounding (40%)</div>
+            <div className="detail-item">Faucet (30%)</div>
+            <div className="detail-item">Platform Operator (40%)</div>
           </div>
         </LaunchPadItem>
       </LaunchPadContentContainer>
