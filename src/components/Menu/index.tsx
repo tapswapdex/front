@@ -1,16 +1,12 @@
-import React, { Component, Props, useContext, useEffect, useState } from 'react'
-import { Button, ConnectorNames, Dropdown, Heading, Menu as UikitMenu, Toggle, useWalletModal } from 'tapswap-uikit'
+import React, { useEffect, useState } from 'react'
+import { Button, ConnectorNames, Dropdown, Heading, useWalletModal } from 'tapswap-uikit'
 import { ProSidebar, Menu as ProMenu, MenuItem, SubMenu, SidebarHeader } from 'react-pro-sidebar'
 import { useWeb3React } from '@web3-react/core'
-import { allLanguages } from 'config/localisation/languageCodes'
-import { LanguageContext } from 'contexts/Localisation/languageContext'
+
 import { connectorsByName } from 'utils/web3React'
 import { Link, useHistory } from 'react-router-dom'
 import useTheme from 'hooks/useTheme'
-import useAuth from 'hooks/useAuth'
 
-import useI18n from 'hooks/useI18n'
-import { usePriceCakeBusd, useProfile } from 'state/hooks'
 import { AlignLeft } from 'react-feather'
 import config from './config'
 import sun from '../../assets/svg/sun'
@@ -18,14 +14,9 @@ import moon from '../../assets/svg/moon'
 import tapswapLogo from '../../assets/img/logo.png'
 import tapswapLogoDark from '../../assets/img/logo-dark.png'
 
-const Menu = (props) => {
-  const { login, logout } = useAuth()
-  const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
+const Menu = () => {
   const { isDark, toggleTheme } = useTheme()
-  const cakePriceUsd = usePriceCakeBusd()
-  const { profile } = useProfile()
 
-  const TranslateString = useI18n()
   const { push } = useHistory()
   const { account, activate, deactivate } = useWeb3React()
 
