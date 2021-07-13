@@ -2,23 +2,23 @@ import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
-  {
-    pid: 0,
-    isOldPsc: true,
-    isTokenOnly: true,
-    lpSymbol: 'TAPS',
-    lpAddresses: {
-      97: '',
-      56: '0x455254e9f1846F70184F586B56dfFb82E5370dec', // TAPS-BUSD LP
-    },
-    tokenSymbol: 'TAPS',
-    tokenAddresses: {
-      97: '',
-      56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
+  // {
+  //   pid: 0,
+  //   isOldPsc: true,
+  //   isTokenOnly: true,
+  //   lpSymbol: 'TAPS',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x455254e9f1846F70184F586B56dfFb82E5370dec', // TAPS-BUSD LP
+  //   },
+  //   tokenSymbol: 'TAPS',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x56eab07247e3e6404ac90140F20bba61375d5C3C',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BUSD,
+  //   quoteTokenAdresses: contracts.busd,
+  // },
   {
     pid: 4,
     isPsc: true,
