@@ -9,7 +9,7 @@ import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
-import Faq from 'react-faq-component'
+import GuildIcon from 'assets/svg/icons/guild'
 import { useFarms, usePriceBnbBusd, usePools, usePriceEthBnb, usePriceCakeBusd, useFarmFromPid } from 'state/hooks'
 import { QuoteToken } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
@@ -19,7 +19,6 @@ import Divider from '../Pools/components/Divider'
 import Coming from '../Pools/components/Coming'
 import useApePrice from '../../hooks/useApePrice'
 import useCakePrice from '../../hooks/useCakePrice'
-import Page from '../../components/layout/Page'
 
 const faqData = {
   title: 'FAQ',
@@ -184,8 +183,8 @@ const Bush: React.FC = () => {
   return (
     <>
       <Header>
-        <Heading as="h1" size="xl" color="secondary" mb="24px">
-          {TranslateString(999, 'Yield Guild')}
+        <Heading as="h1" size="xl" color="secondary" mb="36px" textAlign="center">
+          Yield <GuildIcon /> Guild
         </Heading>
         <Heading size="md" color="text">
           <ul>

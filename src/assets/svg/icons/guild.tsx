@@ -7,7 +7,7 @@ export default function GuildIcon() {
   return (
     <svg
       viewBox="-60 -30 600 600"
-      width="24px"
+      width="80px"
       fill={isDark ? 'white' : 'blue'}
       color="text"
       xmlns="http://www.w3.org/2000/svg"
