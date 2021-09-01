@@ -31,7 +31,7 @@ const EarnAssetCard = () => {
           <Heading size="md">Earn {assets}</Heading>
 
           <Flex justifyContent="space-between">
-            <Heading size="md">in Smart Faucets</Heading>
+            <Heading size="md">in Yield Guilds</Heading>
           </Flex>
           <div
             style={{

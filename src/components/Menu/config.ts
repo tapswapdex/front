@@ -51,7 +51,7 @@ const config: AppMenuEntry[] = [
     svgIcon: PoolsIcon,
   },
   {
-    label: 'Smart Faucet',
+    label: 'Yield Guild',
     icon: 'BushIcon',
     href: '/bush',
     svgIcon: FaucetIcon,

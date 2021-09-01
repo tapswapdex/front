@@ -62,7 +62,7 @@ const TotalValueLockedCard = () => {
               </Heading>
               <>
                 <CardValue fontSize="23px" value={totalValue.toNumber()} prefix="$" decimals={2} />
-                <Text color="textSubtle">{TranslateString(732, 'Across all Farms, Pools and Smart Faucets')}</Text>
+                <Text color="textSubtle">{TranslateString(732, 'Across all Farms, Pools and Yield Guilds')}</Text>
               </>
             </CardBody>
           </StyledTotalValueLockedCard>

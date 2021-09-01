@@ -78,7 +78,7 @@ const FarmStepsCard = () => {
               color: theme.colors.primary,
             }}
           >
-            Smart Faucet
+            Yield Guild
           </a>
         </>
       ),
