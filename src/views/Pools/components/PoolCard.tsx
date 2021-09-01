@@ -148,8 +148,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           {isOldSyrup && '[OLD]'} {tokenLabel} {TranslateString(999, 'Yield Guild')}
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
-          <div style={{ flex: 1 }}>
-            <Image src={`/images/tokens/${image || tokenName}.png`} width={64} height={64} alt={tokenName} />
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+            <Image src={`/images/tokens/${image || tokenName}.png`} width={256} height={256} alt={tokenName} />
           </div>
           {!isOldFinishedBush && account && harvest && !isOldSyrup && (
             <HarvestButton
