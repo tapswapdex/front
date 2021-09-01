@@ -9,12 +9,6 @@ import Web3 from 'web3'
 import Card from './Card'
 import CardTitle from './CardTitle'
 
-const Balance = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 40px;
-  font-weight: 600;
-`
-
 const Label = styled.div`
   color: ${({ theme }) => theme.colors.textSubtle};
   font-size: 14px;
@@ -65,7 +59,7 @@ const Coming: React.FC = () => {
         })
       }
     } catch (error) {
-      console.log(error)
+      throw new Error('Error')
     }
   }
 
