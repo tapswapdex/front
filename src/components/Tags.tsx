@@ -1,6 +1,11 @@
 import React from 'react'
 import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'tapswap-uikit'
 
+const qoutationModes = {
+  bnb: 'bnb',
+  ygt: 'ygt',
+}
+
 const CoreTag = (props) => (
   <Tag variant="secondary" outline startIcon={<VerifiedIcon />} {...props}>
     Core
@@ -10,6 +15,12 @@ const CoreTag = (props) => (
 const CommunityTag = (props) => (
   <Tag variant="textSubtle" outline startIcon={<CommunityIcon />} {...props}>
     Community
+  </Tag>
+)
+
+const InsteadTag = ({ mode, ...props }) => (
+  <Tag variant="textSubtle" outline {...props}>
+    {mode === qoutationModes.bnb ? 'Get BNB qoute instead' : 'Get YGT qoute instead'}
   </Tag>
 )
 
@@ -25,4 +36,4 @@ const DualTag = (props) => (
   </Tag>
 )
 
-export { CoreTag, CommunityTag, BinanceTag, DualTag }
+export { CoreTag, CommunityTag, BinanceTag, DualTag, InsteadTag }
