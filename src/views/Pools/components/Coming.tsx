@@ -93,7 +93,7 @@ const Coming: React.FC = () => {
         }}
       />
       <Spacer />
-      <Button variant="secondary" as="a" href="https://t.me/tapswapchat" external width="100%" mb="16px">
+      <Button variant="secondary" onClick={deposite} width="100%" mb="16px">
         Deposit
       </Button>
       <DetailPlaceholder>
