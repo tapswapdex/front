@@ -37,6 +37,7 @@ export enum QuoteToken {
   'TAPS' = 'TAPS',
   'BANANA' = 'BANANA',
   'TAPS_BUSD_APE_LP' = 'TAPS-BUSD APE LP',
+  'YGT' = 'YGT',
 }
 
 export enum PoolCategory {

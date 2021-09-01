@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, ConnectorNames, Dropdown, Heading, useWalletModal } from 'tapswap-uikit'
 import { ProSidebar, Menu as ProMenu, MenuItem, SubMenu, SidebarHeader } from 'react-pro-sidebar'
 import { useWeb3React } from '@web3-react/core'
+import styled from 'styled-components'
 
 import { connectorsByName } from 'utils/web3React'
 import { Link, useHistory } from 'react-router-dom'
@@ -15,6 +16,11 @@ import tapswapLogo from '../../assets/img/logo.png'
 import tapswapLogoDark from '../../assets/img/logo-dark.png'
 
 const Menu = () => {
+  const LinkLabel = styled.span`
+    display: flex;
+    align-items: center;
+    margin-left: 0.2rem;
+  `
   const { isDark, toggleTheme } = useTheme()
 
   const { push } = useHistory()
@@ -259,7 +265,7 @@ const Menu = () => {
               }}
             >
               {item.svgIcon && item.svgIcon()}
-              {item.label}
+              <LinkLabel>{item.label}</LinkLabel>
             </a>
           )
         }
@@ -304,10 +310,12 @@ const Menu = () => {
             target={item.target}
             style={{
               color: isDark ? 'aqua' : '#d2004c',
+              display: 'flex',
+              alignContent: 'center',
             }}
           >
             {item.svgIcon && item.svgIcon()}
-            {item.label}
+            <LinkLabel>{item.label}</LinkLabel>
           </Link>
         )
       })}

@@ -25,6 +25,31 @@ const pools: PoolConfig[] = [
     bushVersion: 1,
     getUrl: '/#/swape?outputCurrency=0x56eab07247e3e6404ac90140F20bba61375d5C3C',
   },
+
+  {
+    sousId: 70, // BSC COre YIELD Guild
+    tokenName: 'YGT',
+    tokenLabel: 'BSC Core Yield   ',
+    tokenAddress: '0x070a08beef8d36734dd67a491202ff35a6a16d97', // rewards token should be SLP
+    stakingTokenName: QuoteToken.YGT,
+    stakingTokenAddress: '0xCbE002053F2d200a1CB152e2296D64698C1030E8', // Staked token
+    stakingTokenDecimals: 18,
+    contractAddress: {
+      97: '',
+      56: '0x6eDeb935A3BbcDcfB6c0E480574ABCf8017AFcC7',
+    },
+    poolCategory: PoolCategory.COMMUNITY,
+    projectLink: 'https://dapp.tapswap.finance/#/',
+    harvest: true,
+    tokenPerBlock: '0.00138',
+    sortOrder: 999,
+    isFinished: false,
+    tokenDecimals: 18,
+    isBush: true,
+    isLp: false,
+    bushVersion: 1,
+    getUrl: '/#/swap?outputCurrency=0xcbe002053f2d200a1cb152e2296d64698c1030e8',
+  },
   // {
   //   sousId: 68, // V1
   //   tokenName: 'WBNB',

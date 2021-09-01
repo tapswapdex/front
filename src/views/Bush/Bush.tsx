@@ -189,10 +189,20 @@ const Bush: React.FC = () => {
         </Heading>
         <Heading size="md" color="text">
           <ul>
-            <li>{TranslateString(580, 'Stake TAPS token and TAPS LPs to earn new tokens.')}</li>
-            <li>{TranslateString(486, 'You can unstake at any time.')}</li>
-            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
-            <li>{TranslateString(742, 'Deposit fees will be automatically burnt.')}</li>
+            <li>{TranslateString(580, 'Stake YGT claim token to earn SLP and AXS token.')}</li>
+            <li>
+              {TranslateString(486, 'The first and only Automated Yield Guild to earn from Axie Infinity Metaverse.')}
+            </li>
+            <li>
+              40% of Farmed SLP allocated directly into this Vault. The rest goes to Scholars, Guild Managers and
+              Buyback program.
+            </li>
+            <li>
+              {TranslateString(
+                742,
+                'At least 300 YGT suggested  minimum deposit to fund the Vault per user but you can deposit any amount. Rewards can be claimed every 15 days',
+              )}
+            </li>
           </ul>
         </Heading>
         {/* <Text style={{ marginTop: '10px' }}>

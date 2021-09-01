@@ -303,7 +303,7 @@
     {
       "data": {
         "stringId": 406,
-        "text": "Rewards are calculated per block."
+        "text": "40% of Farmed SLP allocated directly into this Vault.The rest goes to Scholars,Guild Managers and Buyback program."
       }
     },
     {
@@ -519,7 +519,7 @@
     {
       "data": {
         "stringId": 486,
-        "text": "You can unstake at any time."
+        "text": "The first and only Automated Yield Guild to earn from Axie Infinity Metaverse."
       }
     },
     {
@@ -765,7 +765,7 @@
     {
       "data": {
         "stringId": 580,
-        "text": "Stake TAPS token and TAPS LPs to earn new tokens."
+        "text": "Stake YGT claim token to earn SLP and AXS token."
       }
     },
     {
@@ -1227,7 +1227,7 @@
     {
       "data": {
         "stringId": 742,
-        "text": "Deposit fees will be automatically burnt."
+        "text": "At least 300 YGT suggested  minimum deposit to fund the Vault per user but you can deposit any amount. Rewards can be claimed every 15 days"
       }
     },
     {
