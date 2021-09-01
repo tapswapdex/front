@@ -2,12 +2,12 @@ import { MenuEntry } from 'tapswap-uikit'
 import DocumentIcon from 'assets/svg/icons/document'
 import ExchangeIcon from 'assets/svg/icons/exchange'
 import FarmsIcon from 'assets/svg/icons/farms'
-import FaucetIcon from 'assets/svg/icons/faucet'
 import HomeIcon from 'assets/svg/icons/home'
 import InfoIcon from 'assets/svg/icons/info'
 import MoreIcon from 'assets/svg/icons/more'
 import PoolsIcon from 'assets/svg/icons/pools'
 import SecurityIcon from 'assets/svg/icons/security'
+import GuildIcon from 'assets/svg/icons/guild'
 
 interface AppMenuEntry extends MenuEntry {
   svgIcon?: any
@@ -54,7 +54,7 @@ const config: AppMenuEntry[] = [
     label: 'Yield Guild',
     icon: 'BushIcon',
     href: '/bush',
-    svgIcon: FaucetIcon,
+    svgIcon: GuildIcon,
   },
   // {
   //   label: 'Techrate Audit',
