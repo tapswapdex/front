@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable react/require-default-props */
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js/bignumber'

@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useMemo, useState } from 'react'
 import { Button, Modal, LinkExternal } from 'tapswap-uikit'

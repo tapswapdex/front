@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useContext, useMemo } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 
@@ -11,6 +12,7 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string
   to?: string
+  // eslint-disable-next-line react/no-unused-prop-types
   variant?: 'default' | 'secondary' | 'tertiary'
 }
 

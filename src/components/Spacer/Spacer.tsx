@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 
