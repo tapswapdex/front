@@ -59,7 +59,7 @@ const Claim: React.FC<ClaimProps> = ({
       setIsClaimed()
       toastSuccess('Success!', 'You have successfully claimed your rewards.')
     } catch (error) {
-      toastError('Error', error?.message)
+      toastError('Error')
       console.error(error)
     } finally {
       setPendingTx(false)
