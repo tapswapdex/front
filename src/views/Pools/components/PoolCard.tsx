@@ -177,7 +177,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         ) : (
           <div>-</div>
         )}
-        <Label isFinished={isFinished && sousId !== 0} text={tokenName === 'YGT' ? 'SLP' : tokenName} />
+        <Label isFinished={isFinished && sousId !== 0} text={tokenName === 'YGT' ? 'SLP Earned' : tokenName} />
         <Text color="secondary" fontSize="14px">
           {TranslateString(10009, `Deposit:`)} {stakingTokenName}
         </Text>
