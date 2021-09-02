@@ -177,7 +177,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         ) : (
           <div>-</div>
         )}
-        <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
+        <Label isFinished={isFinished && sousId !== 0} text={tokenName === 'YGT' ? 'SLP' : tokenName} />
         <Text color="secondary" fontSize="14px">
           {TranslateString(10009, `Deposit:`)} {stakingTokenName}
         </Text>
@@ -188,7 +188,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               <div style={{ flex: 1 }}>
                 <Button disabled={isFinished || requestedApproval} onClick={handleApprove} width="100%">
                   {pool?.isBush === true ? (
-                    <span>{TranslateString(999, 'Approve this Lauchpad')}</span>
+                    <span>{TranslateString(999, 'Approve this Guild')}</span>
                   ) : (
                     <span>{`Approve ${stakingTokenName}`}</span>
                   )}
