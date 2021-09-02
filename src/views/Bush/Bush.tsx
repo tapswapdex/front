@@ -3,6 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
+import AxieCard from 'views/Pools/components/AxieCard'
 import { Heading, HelpIcon, Link, Text } from 'tapswap-uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
@@ -180,6 +181,8 @@ const Bush: React.FC = () => {
     }
   `
 
+  const axies = ['2171193', '2171194', '1122545']
+
   return (
     <>
       <Header>
@@ -219,6 +222,10 @@ const Bush: React.FC = () => {
               ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
               : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
             <Coming />
+
+            {axies.map((id) => (
+              <AxieCard axieId={id} />
+            ))}
           </>
         </Route>
         <Route path={`${path}/history`}>
