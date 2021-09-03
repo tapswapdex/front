@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image, Flex, Text } from 'tapswap-uikit'
+import { Button, IconButton, useModal, AddIcon, Text } from 'tapswap-uikit'
 import { useWeb3React } from '@web3-react/core'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -24,10 +24,8 @@ import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
 import CardTitle from './CardTitle'
 import Card from './Card'
-import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
-import { usePoolFromPid } from '../../../state/hooks'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber
@@ -40,7 +38,6 @@ interface HarvestProps {
 const YieldGuild: React.FC<HarvestProps> = ({ pool }) => {
   const {
     sousId,
-    image,
     tokenName,
     tokenLabel,
     stakingTokenName,
@@ -85,8 +82,6 @@ const YieldGuild: React.FC<HarvestProps> = ({ pool }) => {
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
   const isOldFinishedBush = sousId === 66
-
-  const blocksUntilStartHuman = (blocksUntilStart * 3) / 3600
 
   const totalValueFormated = pool.totalValue
     ? `$${Number(pool.totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
