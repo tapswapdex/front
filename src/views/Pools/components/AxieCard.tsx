@@ -151,6 +151,7 @@ const AxieCard = ({ axieId = '' }) => {
         height="600"
         width="600"
       />
+      <Button>Stake</Button>
     </Card>
   )
 }

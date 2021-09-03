@@ -3,7 +3,6 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
-import AxieCard from 'views/Pools/components/AxieCard'
 import { Heading, HelpIcon, Link, Text } from 'tapswap-uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
@@ -20,6 +19,7 @@ import Divider from '../Pools/components/Divider'
 import Coming from '../Pools/components/Coming'
 import useApePrice from '../../hooks/useApePrice'
 import useCakePrice from '../../hooks/useCakePrice'
+import YieldGuild from '../Pools/components/YieldGuild'
 
 const faqData = {
   title: 'FAQ',
@@ -220,12 +220,12 @@ const Bush: React.FC = () => {
           <>
             {stackedOnly
               ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-              : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-            <Coming />
-
-            {axies.map((id) => (
-              <AxieCard axieId={id} />
-            ))}
+              : orderBy(openPools, ['sortOrder']).map((pool) => {
+                  if (pool.axieId) {
+                    return <YieldGuild key={pool.sousId} pool={pool} />
+                  }
+                  return <PoolCard key={pool.sousId} pool={pool} />
+                })}
           </>
         </Route>
         <Route path={`${path}/history`}>

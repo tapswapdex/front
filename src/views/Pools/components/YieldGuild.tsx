@@ -1,9 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
-import { isEmpty } from 'lodash'
-import Web3 from 'web3'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image, Text, Input } from 'tapswap-uikit'
+import { Button, IconButton, useModal, AddIcon, Image, Flex, Text } from 'tapswap-uikit'
 import { useWeb3React } from '@web3-react/core'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -18,18 +16,18 @@ import { useSousHarvest } from 'hooks/useHarvest'
 import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
-import { InsteadTag } from 'components/Tags'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import ReactTooltip from 'react-tooltip'
-import Spacer from 'components/Spacer'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
 import CompoundModal from './CompoundModal'
 import CardTitle from './CardTitle'
 import Card from './Card'
+import OldSyrupTitle from './OldSyrupTitle'
 import HarvestButton from './HarvestButton'
 import CardFooter from './CardFooter'
+import { usePoolFromPid } from '../../../state/hooks'
 
 interface PoolWithApy extends Pool {
   apy: BigNumber
@@ -39,21 +37,7 @@ interface HarvestProps {
   pool: PoolWithApy
 }
 
-const DetailPlaceholder = styled.div`
-  display: flex;
-  font-size: 14px;
-`
-const Value = styled.div`
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 14px;
-`
-
-const qoutationModes = {
-  bnb: 'bnb',
-  ygt: 'ygt',
-}
-
-const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
+const YieldGuild: React.FC<HarvestProps> = ({ pool }) => {
   const {
     sousId,
     image,
@@ -101,6 +85,8 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
   const isOldFinishedBush = sousId === 66
+
+  const blocksUntilStartHuman = (blocksUntilStart * 3) / 3600
 
   const totalValueFormated = pool.totalValue
     ? `$${Number(pool.totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
@@ -154,107 +140,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
     return <div>{rows}</div>
   }
 
-  const [qoutationMode, setQoutationMode] = useState(qoutationModes.bnb)
-  const [bnb, setBnb] = useState('')
-  const [ygt, setYgt] = useState('')
-
-  const deposite = async () => {
-    try {
-      if (!isEmpty(account)) {
-        const web3 = new Web3(Web3.givenProvider)
-        const token = new web3.eth.Contract(
-          JSON.parse(
-            '[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"from","type":"address"},{"indexed":false,"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"Purchase","type":"event"},{"inputs":[{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"WithdrawToken","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"availableToken","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"deposite","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"contract TapSwap","name":"_token","type":"address"},{"internalType":"uint256","name":"_availabletoken","type":"uint256"}],"name":"initialise","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"startEnd","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"token","outputs":[{"internalType":"contract TapSwap","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address payable","name":"_to","type":"address"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"withdrawEth","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}]',
-          ),
-          '0xcb34e1c9d84716462f3bf293167a973807986a0b',
-        )
-
-        const depositeValue = qoutationMode === qoutationModes.bnb ? bnb : getBNBForYgt()
-        await token.methods.deposite().send({
-          from: account,
-          value: web3.utils.toWei(`${depositeValue}`, 'ether'),
-        })
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const getYgtTokens = () => {
-    if (bnb.length > 0 && bnb.match(/^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$/)) {
-      const web3 = new Web3(Web3.givenProvider)
-      const depositValue: any = web3.utils.toWei(bnb, 'ether')
-
-      return (depositValue / 2100000000000000).toFixed(2)
-    }
-    return ''
-  }
-
-  const getBNBForYgt = () => {
-    if (ygt.length > 0 && ygt.match(/^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$/)) {
-      const ygtValue: any = ygt
-
-      return ygtValue * 0.0021
-    }
-    return ''
-  }
-
-  const QoutationBNB = (
-    <>
-      <br />
-      <Input
-        placeholder="1 BNB"
-        value={bnb}
-        onChange={({ target: { value } }) => {
-          setBnb(value)
-        }}
-      />
-      <Spacer />
-      <Button variant="secondary" onClick={deposite} width="100%" mb="16px">
-        {getYgtTokens() === '' ? 'GET YGT' : `GET ${getYgtTokens()} YGT`}
-      </Button>
-      {getYgtTokens() !== '' && (
-        <DetailPlaceholder>
-          <div style={{ flex: 1 }}>YGT Tokens:</div>
-          <Value>{getYgtTokens()}</Value>
-        </DetailPlaceholder>
-      )}
-    </>
-  )
-
-  const QoutationYGT = (
-    <>
-      <br />
-      <Input
-        placeholder="1 YGT"
-        value={ygt}
-        onChange={({ target: { value } }) => {
-          setYgt(value)
-        }}
-      />
-      <Spacer />
-      <Button variant="secondary" onClick={deposite} width="100%" mb="16px">
-        Buy YGT for {getBNBForYgt()} BNB
-      </Button>
-      {getBNBForYgt() !== '' && (
-        <DetailPlaceholder>
-          <div style={{ flex: 1 }}>BNB: </div>
-          <Value>{getBNBForYgt()}</Value>
-        </DetailPlaceholder>
-      )}
-    </>
-  )
-
-  const toggleQoutationModes = () => {
-    if (qoutationMode === qoutationModes.bnb) {
-      setQoutationMode(qoutationModes.ygt)
-    } else {
-      setQoutationMode(qoutationModes.bnb)
-    }
-  }
-
-  const [showBuy, setShowBuy] = useState(false)
-
   return (
     <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
@@ -264,7 +149,12 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
           <div style={{ flex: 1, display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
-            <Image src={`/images/tokens/${image || tokenName}.png`} width={256} height={256} alt={tokenName} />
+            <iframe
+              src={`http://127.0.0.1:5500/axie/pixi/images.html?axieId=${pool.axieId}`}
+              title="axie"
+              height="300"
+              width="600"
+            />
           </div>
           {!isOldFinishedBush && account && harvest && !isOldSyrup && (
             <HarvestButton
@@ -278,27 +168,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             />
           )}
         </div>
-        {!showBuy && (
-          <Button variant="primary" onClick={() => setShowBuy(true)}>
-            Buy YGT
-          </Button>
-        )}
-        {showBuy && (
-          <>
-            Get YGT Token
-            <span role="img" aria-label="eyes">
-              👀
-            </span>
-            <br />
-            {qoutationMode === qoutationModes.bnb ? QoutationBNB : QoutationYGT}
-            <Spacer />
-            <InsteadTag mode={qoutationMode} onClick={toggleQoutationModes} />
-            <Spacer />
-            <Button variant="danger" onClick={() => setShowBuy(false)}>
-              Close
-            </Button>
-          </>
-        )}
         {!isOldFinishedBush && !isOldSyrup ? (
           <BalanceAndCompound>
             <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
@@ -355,6 +224,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
               </>
             ))}
         </StyledCardActions>
+
         <StyledDetails>
           <div style={{ flex: 1 }}>
             {TranslateString(10001, 'Deposit Fee')}{' '}
@@ -466,4 +336,4 @@ const StyledDetails = styled.div`
   font-size: 14px;
 `
 
-export default PoolCard
+export default YieldGuild
