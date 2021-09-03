@@ -19,6 +19,7 @@ import Divider from '../Pools/components/Divider'
 import Coming from '../Pools/components/Coming'
 import useApePrice from '../../hooks/useApePrice'
 import useCakePrice from '../../hooks/useCakePrice'
+import YieldGuild from '../Pools/components/YieldGuild'
 
 const faqData = {
   title: 'FAQ',
@@ -180,6 +181,8 @@ const Bush: React.FC = () => {
     }
   `
 
+  const axies = ['2171193', '2171194', '1122545']
+
   return (
     <>
       <Header>
@@ -217,8 +220,12 @@ const Bush: React.FC = () => {
           <>
             {stackedOnly
               ? orderBy(stackedOnlyPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)
-              : orderBy(openPools, ['sortOrder']).map((pool) => <PoolCard key={pool.sousId} pool={pool} />)}
-            <Coming />
+              : orderBy(openPools, ['sortOrder']).map((pool) => {
+                  if (pool.axieId) {
+                    return <YieldGuild key={pool.sousId} pool={pool} />
+                  }
+                  return <PoolCard key={pool.sousId} pool={pool} />
+                })}
           </>
         </Route>
         <Route path={`${path}/history`}>

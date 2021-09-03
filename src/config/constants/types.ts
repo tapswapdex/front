@@ -97,6 +97,7 @@ export interface PoolConfig {
   depositFee?: number
   getUrl?: string
   totalValue?: BigNumber
+  axieId?: string
 }
 
 export type Images = {

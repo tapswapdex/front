@@ -19,9 +19,15 @@ const CommunityTag = (props) => (
 )
 
 const InsteadTag = ({ mode, ...props }) => (
-  <Tag variant="textSubtle" outline {...props}>
-    {mode === qoutationModes.bnb ? 'Get BNB qoute instead' : 'Get YGT qoute instead'}
-  </Tag>
+  <div
+    style={{
+      cursor: 'pointer',
+    }}
+  >
+    <Tag variant="textSubtle" outline {...props}>
+      {mode === qoutationModes.bnb ? 'Get BNB qoute instead' : 'Get YGT qoute instead'}
+    </Tag>
+  </div>
 )
 
 const BinanceTag = (props) => (
