@@ -479,23 +479,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  {
-    pid: 42,
-    isApe: true,
-    isTokenOnly: true,
-    lpSymbol: 'BUNNY',
-    lpAddresses: {
-      97: '',
-      56: '0xAa78E5580AE24e52d2841281AdA5B55fDd72c81a', // BUNNY-WBNB
-    },
-    tokenSymbol: 'BUNNY',
-    tokenAddresses: {
-      97: '',
-      56: '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51', // BUNNY
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
+  // {
+  //   pid: 42,
+  //   isApe: true,
+  //   isTokenOnly: true,
+  //   lpSymbol: 'BUNNY',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0xAa78E5580AE24e52d2841281AdA5B55fDd72c81a', // BUNNY-WBNB
+  //   },
+  //   tokenSymbol: 'BUNNY',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51', // BUNNY
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
   {
     pid: 40,
     isApe: true,
@@ -611,40 +611,6 @@ const farms: FarmConfig[] = [
     tokenAddresses: {
       97: '',
       56: '0x790be81c3ca0e53974be2688cdb954732c9862e1', // BREW
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 48,
-    isApe: true,
-    isTokenOnly: false,
-    lpSymbol: 'WATCH-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0xa00a91fbb39051e2a6368424a93895c3f1f2290b', // WATCH-BNB
-    },
-    tokenSymbol: 'WATCH',
-    tokenAddresses: {
-      97: '',
-      56: '0x7a9f28eb62c791422aa23ceae1da9c847cbec9b0',
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 49,
-    isApe: true,
-    isTokenOnly: true,
-    lpSymbol: 'WATCH',
-    lpAddresses: {
-      97: '',
-      56: '0xa00a91fbb39051e2a6368424a93895c3f1f2290b', // WATCH-BNB
-    },
-    tokenSymbol: 'WATCH',
-    tokenAddresses: {
-      97: '',
-      56: '0x7a9f28eb62c791422aa23ceae1da9c847cbec9b0', // WATCH
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
@@ -838,40 +804,40 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-  {
-    pid: 61,
-    isApe: true,
-    isTokenOnly: false,
-    lpSymbol: 'DOT-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0x21cbb561c5d7d70e9e6cc42136cb22f07552aeef', // DOT-BNB
-    },
-    tokenSymbol: 'DOT',
-    tokenAddresses: {
-      97: '',
-      56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402',
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
-  {
-    pid: 62,
-    isApe: true,
-    isTokenOnly: true,
-    lpSymbol: 'DOT',
-    lpAddresses: {
-      97: '',
-      56: '0x21cbb561c5d7d70e9e6cc42136cb22f07552aeef', // DOT-BNB
-    },
-    tokenSymbol: 'DOT',
-    tokenAddresses: {
-      97: '',
-      56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', // DOT
-    },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
+  // {
+  //   pid: 61,
+  //   isApe: true,
+  //   isTokenOnly: false,
+  //   lpSymbol: 'DOT-BNB LP',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x21cbb561c5d7d70e9e6cc42136cb22f07552aeef', // DOT-BNB
+  //   },
+  //   tokenSymbol: 'DOT',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402',
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
+  // {
+  //   pid: 62,
+  //   isApe: true,
+  //   isTokenOnly: true,
+  //   lpSymbol: 'DOT',
+  //   lpAddresses: {
+  //     97: '',
+  //     56: '0x21cbb561c5d7d70e9e6cc42136cb22f07552aeef', // DOT-BNB
+  //   },
+  //   tokenSymbol: 'DOT',
+  //   tokenAddresses: {
+  //     97: '',
+  //     56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', // DOT
+  //   },
+  //   quoteTokenSymbol: QuoteToken.BNB,
+  //   quoteTokenAdresses: contracts.wbnb,
+  // },
   {
     pid: 64,
     isApe: true,
